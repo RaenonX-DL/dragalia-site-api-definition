@@ -1,0 +1,8 @@
+# IntelliJ project files
+.idea/
+
+# Library files
+node_modules/
+
+# Miscellaneous
+.wakatime-project

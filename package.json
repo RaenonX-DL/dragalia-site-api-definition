@@ -1,0 +1,23 @@
+{
+  "name": "dragalia-site-api-definition",
+  "version": "1.0.0",
+  "description": "The API definitions between the frontend and the backend of Dragalia Lost info website by OM in TypeScript.",
+  "scripts": {
+    "lint": "eslint api/ --ext .ts,.tsx",
+    "lint:fix": "eslint api/ --ext .ts,.tsx --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RaenonX-DL/dragalia-site-api-definition.git"
+  },
+  "author": "RaenonX",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.14.25",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
+    "eslint": "^7.19.0",
+    "eslint-config-google": "^0.14.0",
+    "typescript": "^4.1.3"
+  }
+}
