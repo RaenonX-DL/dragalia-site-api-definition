@@ -24,7 +24,7 @@ However, this repository should be imported to the [frontend] and the [backend] 
 
 [api-cq-link]: https://www.codacy.com/gh/RaenonX-DL/dragalia-site-api-definition/dashboard
 
-[api-cq-badge]: https://app.codacy.com/project/badge/Grade/55272ed17a81453cb5852a9c04b9f235
+[api-cq-badge]: https://app.codacy.com/project/badge/Grade/def1798a91b4417e880f32dfeaffee25
 
 [api-time-link]: https://wakatime.com/badge/github/RaenonX-DL/dragalia-site-api-definition
 
@@ -34,6 +34,6 @@ However, this repository should be imported to the [frontend] and the [backend] 
 
 [api-lgtm-alert-link]: https://lgtm.com/projects/g/RaenonX-DL/dragalia-site-api-definition/alerts/
 
-[api-lgtm-quality-badge]: https://img.shields.io/lgtm/grade/python/g/RaenonX-DL/dragalia-site-api-definition.svg?logo=lgtm&logoWidth=18
+[api-lgtm-quality-badge]: https://img.shields.io/lgtm/grade/javascript/g/RaenonX-DL/dragalia-site-api-definition.svg?logo=lgtm&logoWidth=18
 
 [api-lgtm-quality-link]: https://lgtm.com/projects/g/RaenonX-DL/dragalia-site-api-definition/context:javascript

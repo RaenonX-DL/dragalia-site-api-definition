@@ -1,7 +1,9 @@
 /**
  * Class for API endpoints.
  */
-export default class ApiEndPoints {
+export class ApiEndPoints {
+  static ROOT = '/';
+
   static USER_LOGIN = '/user/login';
 
   static POST_QUEST_PUBLISH = '/posts/quest/publish';
@@ -17,4 +19,8 @@ export default class ApiEndPoints {
   static POST_ANALYSIS_EDIT_CHARA = '/posts/analysis/edit/chara';
   static POST_ANALYSIS_EDIT_DRAGON = '/posts/analysis/edit/dragon';
   static POST_ANALYSIS_ID_CHECK = '/posts/analysis/id-check';
+
+  // These shouldn't be used in any cases besides CI
+  static NOT_EXISTS = '/404';
+  static ERROR_TEST = '/500';
 }
