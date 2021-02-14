@@ -10,7 +10,7 @@ export interface PostListPayload extends RequestPayloadBase {
 
 export interface SinglePostPayload extends RequestPayloadBase {
   seqId?: number,
-  lang?: string
+  lang: string
 }
 
 export interface PostModifyPayload extends SinglePostPayload {
