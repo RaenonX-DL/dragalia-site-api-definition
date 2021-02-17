@@ -1,12 +1,14 @@
 import {BaseResponse} from '../../base/response';
 
-export type PostListEntry = {
+export type PostUnit = {
   seqId: number | string,
   lang: string,
   viewCount: number,
-  modified: string,
-  published: string,
+  modified: Date,
+  published: Date,
 }
+
+export type PostListEntry = PostUnit
 
 export type PostModifyNote = {
   timestamp: string,
@@ -28,15 +30,10 @@ export type PostListResponse = BaseResponse & {
   posts: Array<PostListEntry>
 }
 
-export type PostGetSuccessResponse = BaseResponse & {
+export type PostGetSuccessResponse = BaseResponse & PostUnit & {
   isAdmin: boolean,
   showAds: boolean,
-  seqId: number,
-  lang: string,
-  modified: string,
-  published: string,
   modifyNotes: Array<PostModifyNote>,
-  viewCount: number,
   isAltLang: boolean,
   otherLangs: Array<string>
 }
