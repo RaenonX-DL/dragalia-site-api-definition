@@ -11,7 +11,7 @@ export type PostUnit = {
 export type PostListEntry = PostUnit
 
 export type PostModifyNote = {
-  timestamp: string,
+  timestamp: Date,
   note: string
 }
 
