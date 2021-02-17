@@ -1,4 +1,4 @@
 import {BaseResponse} from '../base/response';
 
-export interface UserLoginResponse extends BaseResponse {
+export type UserLoginResponse = BaseResponse & {
 }

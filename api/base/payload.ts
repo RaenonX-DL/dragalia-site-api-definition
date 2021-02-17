@@ -2,17 +2,17 @@ export type RequestPayloadBase = {
   googleUid: string
 }
 
-export interface PostListPayload extends RequestPayloadBase {
+export type PostListPayload = RequestPayloadBase & {
   langCode: string,
   start: number,
   limit: number
 }
 
-export interface SinglePostPayload extends RequestPayloadBase {
+export type SinglePostPayload = RequestPayloadBase & {
   seqId?: number,
   lang: string
 }
 
-export interface PostModifyPayload extends SinglePostPayload {
+export type PostModifyPayload = SinglePostPayload & {
   modifyNote: string
 }

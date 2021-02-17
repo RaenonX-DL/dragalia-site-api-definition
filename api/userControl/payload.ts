@@ -1,5 +1,5 @@
 import {RequestPayloadBase} from '../base/payload';
 
-export interface UserLoginPayload extends RequestPayloadBase {
+export type UserLoginPayload = RequestPayloadBase & {
   googleEmail: string
 }

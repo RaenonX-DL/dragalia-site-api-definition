@@ -7,7 +7,7 @@ export type CharacterSkill = {
   tips: string
 }
 
-interface AnalysisPostPublishPayload extends SinglePostPayload {
+export type AnalysisPostPublishPayload = SinglePostPayload & {
   name: string,
   summary: string,
   summon: string,
@@ -18,30 +18,30 @@ interface AnalysisPostPublishPayload extends SinglePostPayload {
   keywords: string
 }
 
-export interface CharaAnalysisPostPublishPayload extends AnalysisPostPublishPayload {
+export type CharaAnalysisPostPublishPayload = AnalysisPostPublishPayload & {
   forceStrikes: string,
   skills: Array<CharacterSkill>,
   tipsBuilds: string
 }
 
-export interface DragonAnalysisPostPublishPayload extends AnalysisPostPublishPayload {
+export type DragonAnalysisPostPublishPayload = AnalysisPostPublishPayload & {
   ultimate: string,
   notes: string,
   suitableCharacters: string
 }
 
-export interface AnalysisPostListPayload extends PostListPayload {
+export type AnalysisPostListPayload = PostListPayload & {
 }
 
-export interface AnalysisPostGetPayload extends SinglePostPayload {
+export type AnalysisPostGetPayload = SinglePostPayload & {
   incCount: boolean
 }
 
-export interface CharaAnalysisPostEditPayload extends PostModifyPayload, CharaAnalysisPostPublishPayload {
+export type CharaAnalysisPostEditPayload = PostModifyPayload & CharaAnalysisPostPublishPayload & {
 }
 
-export interface DragonAnalysisPostEditPayload extends PostModifyPayload, DragonAnalysisPostPublishPayload {
+export type DragonAnalysisPostEditPayload = PostModifyPayload & DragonAnalysisPostPublishPayload & {
 }
 
-export interface AnalysisPostIdCheckPayload extends SinglePostPayload {
+export type AnalysisPostIdCheckPayload = SinglePostPayload & {
 }

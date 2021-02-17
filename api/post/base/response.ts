@@ -13,21 +13,21 @@ export type PostModifyNote = {
   note: string
 }
 
-export interface PostUpdateSuccessResponse extends BaseResponse {
+export type PostUpdateSuccessResponse = BaseResponse & {
   seqId: number
 }
 
-export interface PostPublishSuccessResponse extends PostUpdateSuccessResponse {
+export type PostPublishSuccessResponse = PostUpdateSuccessResponse & {
 }
 
-export interface PostListResponse extends BaseResponse {
+export type PostListResponse = BaseResponse & {
   isAdmin: boolean,
   startIdx: number,
   postCount: number,
-  posts: Array<unknown>
+  posts: Array<PostListEntry>
 }
 
-export interface PostGetSuccessResponse extends BaseResponse {
+export type PostGetSuccessResponse = BaseResponse & {
   isAdmin: boolean,
   seqId: number,
   lang: string,
@@ -39,10 +39,10 @@ export interface PostGetSuccessResponse extends BaseResponse {
   otherLangs: Array<string>
 }
 
-export interface PostEditSuccessResponse extends PostUpdateSuccessResponse {
+export type PostEditSuccessResponse = PostUpdateSuccessResponse & {
 }
 
-export interface PostIdCheckResponse extends BaseResponse {
+export type PostIdCheckResponse = BaseResponse & {
   isAdmin: boolean,
   available: boolean
 }

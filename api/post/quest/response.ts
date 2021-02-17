@@ -8,18 +8,18 @@ import {
 import {PositionalInfo} from './payload';
 
 
-export interface QuestPostListResponse extends PostListResponse {
+export type QuestPostListResponse = PostListResponse & {
   posts: Array<QuestPostListEntry>
 }
 
-export interface QuestPostListEntry extends PostListEntry {
+export type QuestPostListEntry = PostListEntry & {
   title: string,
 }
 
-export interface QuestPostPublishSuccessResponse extends PostUpdateSuccessResponse {
+export type QuestPostPublishSuccessResponse = PostUpdateSuccessResponse & {
 }
 
-export interface QuestPostGetSuccessResponse extends PostGetSuccessResponse {
+export type QuestPostGetSuccessResponse = PostGetSuccessResponse & {
   title: string,
   general: string,
   video: string,
@@ -27,8 +27,8 @@ export interface QuestPostGetSuccessResponse extends PostGetSuccessResponse {
   addendum: string,
 }
 
-export interface QuestPostEditSuccessResponse extends PostUpdateSuccessResponse {
+export type QuestPostEditSuccessResponse = PostUpdateSuccessResponse & {
 }
 
-export interface QuestPostIdCheckResponse extends PostIdCheckResponse {
+export type QuestPostIdCheckResponse = PostIdCheckResponse & {
 }

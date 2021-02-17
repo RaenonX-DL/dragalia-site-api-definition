@@ -7,10 +7,10 @@ export type PositionalInfo = {
   tips: string,
 }
 
-export interface QuestPostListPayload extends PostListPayload {
+export type QuestPostListPayload = PostListPayload & {
 }
 
-export interface QuestPostPublishPayload extends SinglePostPayload {
+export type QuestPostPublishPayload = SinglePostPayload & {
   title: string,
   general: string,
   video: string,
@@ -18,12 +18,12 @@ export interface QuestPostPublishPayload extends SinglePostPayload {
   addendum: string
 }
 
-export interface QuestPostEditPayload extends QuestPostPublishPayload, PostModifyPayload {
+export type QuestPostEditPayload = QuestPostPublishPayload & PostModifyPayload & {
 }
 
-export interface QuestPostGetPayload extends SinglePostPayload {
+export type QuestPostGetPayload = SinglePostPayload & {
   incCount?: boolean
 }
 
-export interface QuestPostIdCheckPayload extends SinglePostPayload {
+export type QuestPostIdCheckPayload = SinglePostPayload & {
 }

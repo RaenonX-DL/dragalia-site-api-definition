@@ -1,33 +1,34 @@
-import {CharacterSkill} from './payload';
 import {
   PostEditSuccessResponse,
-  PostGetSuccessResponse, PostIdCheckResponse,
+  PostGetSuccessResponse,
+  PostIdCheckResponse,
   PostListEntry,
   PostListResponse,
   PostPublishSuccessResponse,
 } from '../base/response';
+import {CharacterSkill} from './payload';
 
 export enum AnalysisPostType {
   CHARACTER = 1,
   DRAGON = 2
 }
 
-export interface AnalysisPostListResponse extends PostListResponse {
+export type AnalysisPostListResponse = PostListResponse & {
   posts: Array<AnalysisPostListEntry>
 }
 
-export interface AnalysisPostListEntry extends PostListEntry {
+export type AnalysisPostListEntry = PostListEntry & {
   type: AnalysisPostType,
   unitName: string,
 }
 
-export interface CharaAnalysisPublishSuccessResponse extends PostPublishSuccessResponse {
+export type CharaAnalysisPublishSuccessResponse = PostPublishSuccessResponse & {
 }
 
-export interface DragonAnalysisPublishSuccessResponse extends PostPublishSuccessResponse {
+export type DragonAnalysisPublishSuccessResponse = PostPublishSuccessResponse & {
 }
 
-export interface AnalysisPostGetSuccessResponse extends PostGetSuccessResponse {
+export type AnalysisPostGetSuccessResponse = PostGetSuccessResponse & {
   type: number,
   name: string,
   summary: string,
@@ -39,18 +40,18 @@ export interface AnalysisPostGetSuccessResponse extends PostGetSuccessResponse {
   keywords: string
 }
 
-export interface CharacterAnalysisPost extends AnalysisPostGetSuccessResponse {
+export type CharacterAnalysisPost = AnalysisPostGetSuccessResponse & {
   forceStrikes: string,
   skills: Array<CharacterSkill>,
   tipsBuilds: string
 }
 
-export interface DragonAnalysisPost extends AnalysisPostGetSuccessResponse {
+export type DragonAnalysisPost = AnalysisPostGetSuccessResponse & {
   ultimate: string,
   notes: string,
   suitableCharacters: string
 }
 
-export interface AnalysisPostEditSuccessResponse extends PostEditSuccessResponse {}
+export type AnalysisPostEditSuccessResponse = PostEditSuccessResponse & unknown
 
-export interface AnalysisPostIdCheckResponse extends PostIdCheckResponse {}
+export type AnalysisPostIdCheckResponse = PostIdCheckResponse & unknown
