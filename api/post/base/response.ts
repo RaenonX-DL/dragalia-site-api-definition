@@ -22,6 +22,7 @@ export type PostPublishSuccessResponse = PostUpdateSuccessResponse & {
 
 export type PostListResponse = BaseResponse & {
   isAdmin: boolean,
+  showAds: boolean,
   startIdx: number,
   postCount: number,
   posts: Array<PostListEntry>
@@ -29,6 +30,7 @@ export type PostListResponse = BaseResponse & {
 
 export type PostGetSuccessResponse = BaseResponse & {
   isAdmin: boolean,
+  showAds: boolean,
   seqId: number,
   lang: string,
   modified: string,
