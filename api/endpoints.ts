@@ -5,6 +5,7 @@ export class ApiEndPoints {
   static ROOT = '/';
 
   static USER_LOGIN = '/user/login';
+  static USER_SHOW_ADS = '/user/show-ads';
 
   static POST_QUEST_PUBLISH = '/posts/quest/publish';
   static POST_QUEST_LIST = '/posts/quest';
