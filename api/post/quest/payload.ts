@@ -10,13 +10,15 @@ export type PositionalInfo = {
 export type QuestPostListPayload = PostListPayload & {
 }
 
-export type QuestPostPublishPayload = SinglePostPayload & {
+export type QuestPostPayload = SinglePostPayload & {
   title: string,
   general: string,
   video: string,
   positional: Array<PositionalInfo>,
   addendum: string
 }
+
+export type QuestPostPublishPayload = QuestPostPayload;
 
 export type QuestPostEditPayload = QuestPostPublishPayload & PostModifyPayload & {
 }
