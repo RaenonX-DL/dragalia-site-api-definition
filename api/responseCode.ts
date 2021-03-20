@@ -20,7 +20,7 @@ export enum ApiResponseCode {
  */
 export class ApiResponseCodeUtil {
   /**
-   * Check if {@code code} is successful.
+   * Check if ``code`` is successful.
    *
    * @param {ApiResponseCode} code response code to check
    * @return {boolean} if the response code is successful
