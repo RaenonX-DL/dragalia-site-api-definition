@@ -8,17 +8,17 @@ import {
 } from '../base/response';
 import {CharacterSkill} from './payload';
 
-export enum AnalysisPostType {
+export enum AnalysisType {
   CHARACTER = 1,
   DRAGON = 2
 }
 
-export type AnalysisPostListResponse = PostListResponse & {
-  posts: Array<AnalysisPostListEntry>
+export type AnalysisListResponse = PostListResponse & {
+  posts: Array<AnalysisListEntry>
 }
 
-export type AnalysisPostListEntry = PostListEntry & {
-  type: AnalysisPostType,
+export type AnalysisListEntry = PostListEntry & {
+  type: AnalysisType,
   unitName: string,
 }
 
@@ -28,7 +28,7 @@ export type CharaAnalysisPublishSuccessResponse = PostPublishSuccessResponse & {
 export type DragonAnalysisPublishSuccessResponse = PostPublishSuccessResponse & {
 }
 
-export type AnalysisPostGetSuccessResponse = PostGetSuccessResponse & {
+export type AnalysisGetSuccessResponse = PostGetSuccessResponse & {
   type: number,
   name: string,
   summary: string,
@@ -40,18 +40,18 @@ export type AnalysisPostGetSuccessResponse = PostGetSuccessResponse & {
   keywords: string
 }
 
-export type CharacterAnalysisPost = AnalysisPostGetSuccessResponse & {
+export type CharacterAnalysis = AnalysisGetSuccessResponse & {
   forceStrikes: string,
   skills: Array<CharacterSkill>,
   tipsBuilds: string
 }
 
-export type DragonAnalysisPost = AnalysisPostGetSuccessResponse & {
+export type DragonAnalysis = AnalysisGetSuccessResponse & {
   ultimate: string,
   notes: string,
   suitableCharacters: string
 }
 
-export type AnalysisPostEditSuccessResponse = PostEditSuccessResponse & unknown
+export type AnalysisEditSuccessResponse = PostEditSuccessResponse & unknown
 
-export type AnalysisPostIdCheckResponse = PostIdCheckResponse & unknown
+export type AnalysisIdCheckResponse = PostIdCheckResponse & unknown
