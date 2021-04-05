@@ -28,7 +28,7 @@ export type CharaAnalysisPublishSuccessResponse = PostPublishSuccessResponse & {
 export type DragonAnalysisPublishSuccessResponse = PostPublishSuccessResponse & {
 }
 
-export type AnalysisGetSuccessResponse = PostGetSuccessResponse & {
+export type AnalysisGetContent = {
   type: number,
   name: string,
   summary: string,
@@ -40,17 +40,23 @@ export type AnalysisGetSuccessResponse = PostGetSuccessResponse & {
   keywords: string
 }
 
-export type CharacterAnalysis = AnalysisGetSuccessResponse & {
+export type AnalysisGetSuccessResponse = PostGetSuccessResponse & AnalysisGetContent
+
+export type CharacterAnalysisGetContent = AnalysisGetContent & {
   forceStrikes: string,
   skills: Array<CharacterSkill>,
   tipsBuilds: string
 }
 
-export type DragonAnalysis = AnalysisGetSuccessResponse & {
+export type CharacterAnalysis = AnalysisGetSuccessResponse & CharacterAnalysisGetContent
+
+export type DragonAnalysisGetContent = AnalysisGetContent & {
   ultimate: string,
   notes: string,
   suitableCharacters: string
 }
+
+export type DragonAnalysis = AnalysisGetSuccessResponse & DragonAnalysisGetContent
 
 export type AnalysisEditSuccessResponse = PostEditSuccessResponse & unknown
 
