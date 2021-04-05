@@ -16,16 +16,17 @@ export type QuestPostListEntry = PostListEntry & {
   title: string,
 }
 
-export type QuestPostPublishSuccessResponse = PostUpdateSuccessResponse & {
-}
+export type QuestPostPublishSuccessResponse = PostUpdateSuccessResponse
 
-export type QuestPostGetSuccessResponse = PostGetSuccessResponse & {
+export type QuestPostGetContent = {
   title: string,
   general: string,
   video: string,
   info: Array<PositionalInfo>,
   addendum: string,
 }
+
+export type QuestPostGetSuccessResponse = PostGetSuccessResponse & QuestPostGetContent
 
 export type QuestPostEditSuccessResponse = PostUpdateSuccessResponse & {
 }
