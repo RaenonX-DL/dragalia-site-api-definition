@@ -2,7 +2,7 @@ import {PostListPayload, PostModifyPayload, SinglePostPayload} from '../../base/
 
 export type AnalysisListPayload = PostListPayload
 
-export type AnalysisPublishPayload = SinglePostPayload & {
+export type AnalysisPayload = SinglePostPayload & {
   name: string,
   summary: string,
   summon: string,
@@ -10,8 +10,10 @@ export type AnalysisPublishPayload = SinglePostPayload & {
   normalAttacks: string,
   videos: string,
   story: string,
-  keywords: string
+  keywords: string,
 }
+
+export type AnalysisPublishPayload = AnalysisPayload
 
 export type AnalysisGetPayload = SinglePostPayload & {
   incCount: boolean
@@ -23,23 +25,23 @@ export type CharacterSkill = {
   name: string,
   info: string,
   rotations: string,
-  tips: string
+  tips: string,
 }
 
-export type CharaAnalysisPayload = AnalysisPublishPayload & {
+export type CharaAnalysisPayload = AnalysisPayload & {
   forceStrikes: string,
   skills: Array<CharacterSkill>,
-  tipsBuilds: string
+  tipsBuilds: string,
 }
 
 export type CharaAnalysisPublishPayload = CharaAnalysisPayload
 
 export type CharaAnalysisEditPayload = PostModifyPayload & CharaAnalysisPublishPayload
 
-export type DragonAnalysisPayload = AnalysisPublishPayload & {
-  forceStrikes: string,
-  skills: Array<CharacterSkill>,
-  tipsBuilds: string
+export type DragonAnalysisPayload = AnalysisPayload & {
+  ultimate: string,
+  notes: string,
+  suitableCharacters: string,
 }
 
 export type DragonAnalysisPublishPayload = DragonAnalysisPayload
