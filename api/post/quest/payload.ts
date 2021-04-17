@@ -1,4 +1,5 @@
 import {PostListPayload, PostModifyPayload, SinglePostPayload} from '../../base/payload';
+import {PostGetPayload} from '../base/payload';
 
 export type PositionalInfo = {
   position: string,
@@ -7,8 +8,7 @@ export type PositionalInfo = {
   tips: string,
 }
 
-export type QuestPostListPayload = PostListPayload & {
-}
+export type QuestPostListPayload = PostListPayload
 
 export type QuestPostPayload = SinglePostPayload & {
   title: string,
@@ -23,9 +23,7 @@ export type QuestPostPublishPayload = QuestPostPayload;
 export type QuestPostEditPayload = QuestPostPublishPayload & PostModifyPayload & {
 }
 
-export type QuestPostGetPayload = SinglePostPayload & {
-  incCount?: boolean
-}
+export type QuestPostGetPayload = PostGetPayload
 
 export type QuestPostIdCheckPayload = SinglePostPayload & {
 }

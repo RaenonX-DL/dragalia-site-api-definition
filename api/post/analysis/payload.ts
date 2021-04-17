@@ -1,4 +1,5 @@
 import {PostListPayload, PostModifyPayload, SinglePostPayload} from '../../base/payload';
+import {PostGetPayload} from '../base/payload';
 
 export type AnalysisListPayload = PostListPayload
 
@@ -15,9 +16,7 @@ export type AnalysisPayload = SinglePostPayload & {
 
 export type AnalysisPublishPayload = AnalysisPayload
 
-export type AnalysisGetPayload = SinglePostPayload & {
-  incCount: boolean
-}
+export type AnalysisGetPayload = PostGetPayload
 
 export type AnalysisIdCheckPayload = SinglePostPayload
 

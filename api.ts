@@ -1,6 +1,7 @@
 export * from './api/base/payload';
 export * from './api/base/response';
 
+export * from './api/post/base/payload';
 export * from './api/post/base/response';
 export * from './api/post/analysis/payload';
 export * from './api/post/analysis/response';
