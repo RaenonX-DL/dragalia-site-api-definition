@@ -58,6 +58,8 @@ export type DragonAnalysisGetContent = AnalysisGetContent & {
 
 export type DragonAnalysis = AnalysisGetSuccessResponse & DragonAnalysisGetContent
 
-export type AnalysisEditSuccessResponse = PostEditSuccessResponse & unknown
+export type AnalysisEditSuccessResponse = PostEditSuccessResponse
 
-export type AnalysisIdCheckResponse = PostIdCheckResponse & unknown
+export type AnalysisIdCheckResponse = PostIdCheckResponse
+
+export type AnalysisResponse = CharacterAnalysis | DragonAnalysis
