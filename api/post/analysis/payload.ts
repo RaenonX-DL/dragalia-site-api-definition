@@ -1,5 +1,5 @@
 import {PostListPayload, PostModifyPayload, SinglePostPayload} from '../../base/payload';
-import {PostGetPayload} from '../base/payload';
+import {PostGetPayload, PostIdCheckPayload} from '../base/payload';
 
 export type AnalysisListPayload = PostListPayload
 
@@ -18,7 +18,7 @@ export type AnalysisPublishPayload = AnalysisPayload
 
 export type AnalysisGetPayload = PostGetPayload
 
-export type AnalysisIdCheckPayload = SinglePostPayload
+export type AnalysisIdCheckPayload = PostIdCheckPayload
 
 export type CharacterSkill = {
   name: string,
