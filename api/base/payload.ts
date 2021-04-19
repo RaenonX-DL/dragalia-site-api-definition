@@ -8,11 +8,15 @@ export type PostListPayload = RequestPayloadBase & {
   limit: number
 }
 
-export type SinglePostPayload = RequestPayloadBase & {
+export type PostIdentifierPayload = RequestPayloadBase & {
   seqId?: number,
-  lang: string
+  lang: string,
 }
 
-export type PostModifyPayload = SinglePostPayload & {
+export type PostMetaPayload = PostIdentifierPayload & {
+  title: string,
+}
+
+export type PostModifyPayload = PostIdentifierPayload & {
   modifyNote: string
 }

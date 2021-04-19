@@ -1,10 +1,9 @@
-import {PostListPayload, PostModifyPayload, SinglePostPayload} from '../../base/payload';
+import {PostListPayload, PostMetaPayload, PostModifyPayload} from '../../base/payload';
 import {PostGetPayload, PostIdCheckPayload} from '../base/payload';
 
 export type AnalysisListPayload = PostListPayload
 
-export type AnalysisPayload = SinglePostPayload & {
-  name: string,
+export type AnalysisPayload = PostMetaPayload & {
   summary: string,
   summon: string,
   passives: string,

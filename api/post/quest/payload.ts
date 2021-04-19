@@ -1,4 +1,4 @@
-import {PostListPayload, PostModifyPayload, SinglePostPayload} from '../../base/payload';
+import {PostListPayload, PostMetaPayload, PostModifyPayload} from '../../base/payload';
 import {PostGetPayload, PostIdCheckPayload} from '../base/payload';
 
 export type PositionalInfo = {
@@ -10,8 +10,7 @@ export type PositionalInfo = {
 
 export type QuestPostListPayload = PostListPayload
 
-export type QuestPostPayload = SinglePostPayload & {
-  title: string,
+export type QuestPostPayload = PostMetaPayload & {
   general: string,
   video: string,
   positional: Array<PositionalInfo>,

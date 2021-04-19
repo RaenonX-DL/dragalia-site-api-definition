@@ -1,8 +1,8 @@
-import {SinglePostPayload} from '../../base/payload';
+import {PostIdentifierPayload} from '../../base/payload';
 
-export type PostGetPayload = SinglePostPayload & {
+export type PostGetPayload = PostIdentifierPayload & {
   seqId: number,
   incCount?: boolean
 }
 
-export type PostIdCheckPayload = SinglePostPayload
+export type PostIdCheckPayload = PostIdentifierPayload
