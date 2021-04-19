@@ -1,7 +1,7 @@
 import {BaseResponse} from '../../base/response';
 
 export type PostUnit = {
-  seqId: number | string,
+  seqId: number,
   lang: string,
   viewCount: number,
   modified: Date,
@@ -19,8 +19,7 @@ export type PostUpdateSuccessResponse = BaseResponse & {
   seqId: number
 }
 
-export type PostPublishSuccessResponse = PostUpdateSuccessResponse & {
-}
+export type PostPublishSuccessResponse = PostUpdateSuccessResponse
 
 export type PostListResponse = BaseResponse & {
   isAdmin: boolean,
@@ -38,8 +37,7 @@ export type PostGetSuccessResponse = BaseResponse & PostUnit & {
   otherLangs: Array<string>
 }
 
-export type PostEditSuccessResponse = PostUpdateSuccessResponse & {
-}
+export type PostEditSuccessResponse = PostUpdateSuccessResponse
 
 export type PostIdCheckResponse = BaseResponse & {
   isAdmin: boolean,
