@@ -28,7 +28,6 @@ export type DragonAnalysisPublishSuccessResponse = PostPublishSuccessResponse & 
 
 export type AnalysisGetContent = {
   type: AnalysisType,
-  name: string,
   summary: string,
   summonResult: string,
   passives: string,
