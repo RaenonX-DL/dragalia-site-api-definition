@@ -32,7 +32,7 @@ export type CharaAnalysisPayload = AnalysisPayload & {
   tipsBuilds: string,
 }
 
-export type CharaAnalysisPublishPayload = CharaAnalysisPayload
+export type CharaAnalysisPublishPayload = AnalysisPublishPayload & CharaAnalysisPayload
 
 export type CharaAnalysisEditPayload = PostModifyPayload & CharaAnalysisPublishPayload
 
@@ -42,6 +42,6 @@ export type DragonAnalysisPayload = AnalysisPayload & {
   suitableCharacters: string,
 }
 
-export type DragonAnalysisPublishPayload = DragonAnalysisPayload
+export type DragonAnalysisPublishPayload = AnalysisPublishPayload & DragonAnalysisPayload
 
 export type DragonAnalysisEditPayload = PostModifyPayload & DragonAnalysisPublishPayload
