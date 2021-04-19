@@ -12,9 +12,7 @@ export type QuestPostListResponse = PostListResponse & {
   posts: Array<QuestPostListEntry>
 }
 
-export type QuestPostListEntry = PostListEntry & {
-  title: string,
-}
+export type QuestPostListEntry = PostListEntry
 
 export type QuestPostPublishSuccessResponse = PostUpdateSuccessResponse
 

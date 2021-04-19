@@ -19,11 +19,9 @@ export type AnalysisListResponse = PostListResponse & {
 
 export type AnalysisListEntry = PostListEntry & {
   type: AnalysisType,
-  unitName: string,
 }
 
-export type CharaAnalysisPublishSuccessResponse = PostPublishSuccessResponse & {
-}
+export type CharaAnalysisPublishSuccessResponse = PostPublishSuccessResponse
 
 export type DragonAnalysisPublishSuccessResponse = PostPublishSuccessResponse & {
 }

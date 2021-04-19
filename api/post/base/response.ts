@@ -3,6 +3,7 @@ import {BaseResponse} from '../../base/response';
 export type PostUnit = {
   seqId: number,
   lang: string,
+  title: string,
   viewCount: number,
   modified: Date,
   published: Date,
