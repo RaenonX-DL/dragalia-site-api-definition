@@ -17,6 +17,6 @@ export type PostMetaPayload = PostIdentifierPayload & {
   title: string,
 }
 
-export type PostModifyPayload = PostIdentifierPayload & {
+export type PostModifyPayload = PostMetaPayload & {
   modifyNote: string
 }

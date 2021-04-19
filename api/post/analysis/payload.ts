@@ -15,6 +15,8 @@ export type AnalysisPayload = PostMetaPayload & {
 
 export type AnalysisPublishPayload = AnalysisPayload
 
+export type AnalysisEditPayload = PostModifyPayload & AnalysisPublishPayload
+
 export type AnalysisGetPayload = PostGetPayload
 
 export type AnalysisIdCheckPayload = PostIdCheckPayload
@@ -34,7 +36,7 @@ export type CharaAnalysisPayload = AnalysisPayload & {
 
 export type CharaAnalysisPublishPayload = AnalysisPublishPayload & CharaAnalysisPayload
 
-export type CharaAnalysisEditPayload = PostModifyPayload & CharaAnalysisPublishPayload
+export type CharaAnalysisEditPayload = AnalysisEditPayload & CharaAnalysisPublishPayload
 
 export type DragonAnalysisPayload = AnalysisPayload & {
   ultimate: string,
@@ -44,4 +46,4 @@ export type DragonAnalysisPayload = AnalysisPayload & {
 
 export type DragonAnalysisPublishPayload = AnalysisPublishPayload & DragonAnalysisPayload
 
-export type DragonAnalysisEditPayload = PostModifyPayload & DragonAnalysisPublishPayload
+export type DragonAnalysisEditPayload = AnalysisEditPayload & DragonAnalysisPublishPayload
