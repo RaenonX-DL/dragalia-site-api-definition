@@ -1,4 +1,4 @@
-import {PostListPayload, PostMetaPayload, PostModifyPayload} from '../../base/payload';
+import {PostEditPayload, PostListPayload, PostMetaPayload} from '../../base/payload';
 import {PostGetPayload, PostIdCheckPayload} from '../base/payload';
 
 export type PositionalInfo = {
@@ -19,7 +19,7 @@ export type QuestPostPayload = PostMetaPayload & {
 
 export type QuestPostPublishPayload = QuestPostPayload;
 
-export type QuestPostEditPayload = QuestPostPublishPayload & PostModifyPayload
+export type QuestPostEditPayload = QuestPostPublishPayload & PostEditPayload
 
 export type QuestPostGetPayload = PostGetPayload
 

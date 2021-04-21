@@ -11,7 +11,7 @@ export type PostUnit = {
 
 export type PostListEntry = PostUnit
 
-export type PostModifyNote = {
+export type PostEditNote = {
   timestamp: Date,
   note: string
 }
@@ -33,7 +33,7 @@ export type PostListResponse = BaseResponse & {
 export type PostGetSuccessResponse = BaseResponse & PostUnit & {
   isAdmin: boolean,
   showAds: boolean,
-  modifyNotes: Array<PostModifyNote>,
+  editNotes: Array<PostEditNote>,
   isAltLang: boolean,
   otherLangs: Array<string>
 }

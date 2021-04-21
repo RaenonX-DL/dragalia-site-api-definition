@@ -1,4 +1,4 @@
-import {PostListPayload, PostMetaPayload, PostModifyPayload} from '../../base/payload';
+import {PostEditPayload, PostListPayload, PostMetaPayload} from '../../base/payload';
 import {PostGetPayload, PostIdCheckPayload} from '../base/payload';
 
 export type AnalysisListPayload = PostListPayload
@@ -15,7 +15,7 @@ export type AnalysisPayload = PostMetaPayload & {
 
 export type AnalysisPublishPayload = AnalysisPayload
 
-export type AnalysisEditPayload = PostModifyPayload & AnalysisPublishPayload
+export type AnalysisEditPayload = PostEditPayload & AnalysisPublishPayload
 
 export type AnalysisGetPayload = PostGetPayload
 
