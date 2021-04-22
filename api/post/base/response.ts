@@ -1,8 +1,9 @@
 import {BaseResponse} from '../../base/response';
+import {SupportedLanguages} from '../../other/lang';
 
 export type PostUnit = {
   seqId: number,
-  lang: string,
+  lang: SupportedLanguages,
   title: string,
   viewCount: number,
   modified: Date,
@@ -35,7 +36,7 @@ export type PostGetSuccessResponse = BaseResponse & PostUnit & {
   showAds: boolean,
   editNotes: Array<PostEditNote>,
   isAltLang: boolean,
-  otherLangs: Array<string>
+  otherLangs: Array<SupportedLanguages>
 }
 
 export type PostEditSuccessResponse = PostUpdateSuccessResponse

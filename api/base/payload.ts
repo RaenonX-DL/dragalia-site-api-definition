@@ -1,16 +1,18 @@
+import {SupportedLanguages} from '../other/lang';
+
 export type RequestPayloadBase = {
   googleUid: string
 }
 
 export type PostListPayload = RequestPayloadBase & {
-  langCode: string,
+  langCode: SupportedLanguages,
   start: number,
   limit: number
 }
 
 export type PostIdentifierPayload = RequestPayloadBase & {
   seqId?: number,
-  lang: string,
+  lang: SupportedLanguages,
 }
 
 export type PostMetaPayload = PostIdentifierPayload & {

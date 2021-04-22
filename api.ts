@@ -9,6 +9,7 @@ export * from './api/post/quest/payload';
 export * from './api/post/quest/response';
 
 export * from './api/other/internalError/response';
+export * from './api/other/lang';
 
 export * from './api/userControl/payload';
 export * from './api/userControl/response';
