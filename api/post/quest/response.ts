@@ -26,8 +26,6 @@ export type QuestPostGetContent = {
 
 export type QuestPostGetSuccessResponse = PostGetSuccessResponse & QuestPostGetContent
 
-export type QuestPostEditSuccessResponse = PostUpdateSuccessResponse & {
-}
+export type QuestPostEditSuccessResponse = PostUpdateSuccessResponse
 
-export type QuestPostIdCheckResponse = PostIdCheckResponse & {
-}
+export type QuestPostIdCheckResponse = PostIdCheckResponse
