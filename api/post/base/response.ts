@@ -23,12 +23,12 @@ export type PostUpdateSuccessResponse = BaseResponse & {
 
 export type PostPublishSuccessResponse = PostUpdateSuccessResponse
 
-export type PostListResponse = BaseResponse & {
+export type PostListResponse<E extends PostListEntry = PostListEntry> = BaseResponse & {
   isAdmin: boolean,
   showAds: boolean,
   startIdx: number,
   postCount: number,
-  posts: Array<PostListEntry>
+  posts: Array<E>
 }
 
 export type PostGetSuccessResponse = BaseResponse & PostUnit & {

@@ -13,9 +13,7 @@ export enum AnalysisType {
   DRAGON = 2
 }
 
-export type AnalysisListResponse = PostListResponse & {
-  posts: Array<AnalysisListEntry>
-}
+export type AnalysisListResponse = PostListResponse<AnalysisListEntry>
 
 export type AnalysisListEntry = PostListEntry & {
   type: AnalysisType,
@@ -23,8 +21,7 @@ export type AnalysisListEntry = PostListEntry & {
 
 export type CharaAnalysisPublishSuccessResponse = PostPublishSuccessResponse
 
-export type DragonAnalysisPublishSuccessResponse = PostPublishSuccessResponse & {
-}
+export type DragonAnalysisPublishSuccessResponse = PostPublishSuccessResponse
 
 export type AnalysisGetContent = {
   type: AnalysisType,

@@ -8,9 +8,7 @@ import {
 import {PositionalInfo} from './payload';
 
 
-export type QuestPostListResponse = PostListResponse & {
-  posts: Array<QuestPostListEntry>
-}
+export type QuestPostListResponse = PostListResponse<QuestPostListEntry>
 
 export type QuestPostListEntry = PostListEntry
 
