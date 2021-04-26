@@ -18,7 +18,7 @@ export type QuestPostGetContent = {
   title: string,
   general: string,
   video: string,
-  info: Array<PositionalInfo>,
+  positional: Array<PositionalInfo>,
   addendum: string,
 }
 
