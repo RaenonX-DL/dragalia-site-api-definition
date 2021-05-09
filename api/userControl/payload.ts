@@ -5,3 +5,5 @@ export type UserLoginPayload = RequestPayloadBase & {
 }
 
 export type UserShowAdsPayload = RequestPayloadBase;
+
+export type UserIsAdminPayload = RequestPayloadBase;

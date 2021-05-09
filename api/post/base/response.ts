@@ -1,5 +1,6 @@
 import {BaseResponse} from '../../base/response';
 import {SupportedLanguages} from '../../other/lang';
+import {UserIsAdminResponse, UserShowAdsResponse} from '../../userControl/response';
 
 export type PostUnit = {
   seqId: number,
@@ -23,17 +24,18 @@ export type PostUpdateSuccessResponse = BaseResponse & {
 
 export type PostPublishSuccessResponse = PostUpdateSuccessResponse
 
-export type PostListResponse<E extends PostListEntry = PostListEntry> = BaseResponse & {
-  isAdmin: boolean,
-  showAds: boolean,
+export type PostListResponse<E extends PostListEntry = PostListEntry> = BaseResponse &
+  UserIsAdminResponse &
+  UserShowAdsResponse & {
   startIdx: number,
   postCount: number,
   posts: Array<E>
 }
 
-export type PostGetSuccessResponse = BaseResponse & PostUnit & {
-  isAdmin: boolean,
-  showAds: boolean,
+export type PostGetSuccessResponse = BaseResponse &
+  PostUnit &
+  UserIsAdminResponse &
+  UserShowAdsResponse & {
   editNotes: Array<PostEditNote>,
   isAltLang: boolean,
   otherLangs: Array<SupportedLanguages>
@@ -41,7 +43,6 @@ export type PostGetSuccessResponse = BaseResponse & PostUnit & {
 
 export type PostEditSuccessResponse = PostUpdateSuccessResponse
 
-export type PostIdCheckResponse = BaseResponse & {
-  isAdmin: boolean,
+export type PostIdCheckResponse = BaseResponse & UserIsAdminResponse & {
   available: boolean
 }
