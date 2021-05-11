@@ -1,5 +1,7 @@
+import {ApiResponseCode} from '../responseCode';
+
 export type BaseResponse = {
-  code: number,
+  code: ApiResponseCode,
   success: boolean
 }
 
