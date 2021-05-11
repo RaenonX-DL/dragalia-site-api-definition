@@ -7,14 +7,14 @@ export type PostUnit = {
   lang: SupportedLanguages,
   title: string,
   viewCount: number,
-  modified: Date,
-  published: Date,
+  modifiedEpoch: number,
+  publishedEpoch: number,
 }
 
 export type PostListEntry = PostUnit
 
 export type PostEditNote = {
-  timestamp: Date,
+  timestampEpoch: number,
   note: string
 }
 
