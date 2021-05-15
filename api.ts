@@ -1,6 +1,11 @@
 export * from './api/base/payload';
 export * from './api/base/response';
+export * from './api/meta/general/payload';
+export * from './api/meta/general/response';
+export * from './api/meta/post/payload';
+export * from './api/meta/post/response';
 
+export * from './api/post/types';
 export * from './api/post/base/payload';
 export * from './api/post/base/response';
 export * from './api/post/analysis/payload';

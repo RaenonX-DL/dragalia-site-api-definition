@@ -4,6 +4,9 @@
 export class ApiEndPoints {
   static ROOT = '/';
 
+  static PAGE_META_GENERAL = '/meta/general';
+  static PAGE_META_POST = '/meta/post';
+
   static USER_LOGIN = '/user/login';
   static USER_IS_ADMIN = '/user/is-admin';
   static USER_SHOW_ADS = '/user/show-ads';
