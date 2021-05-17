@@ -4,6 +4,4 @@ export type UserLoginPayload = RequestPayloadBase & {
   googleEmail: string
 }
 
-export type UserShowAdsPayload = RequestPayloadBase;
-
 export type UserIsAdminPayload = RequestPayloadBase;
