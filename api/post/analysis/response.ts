@@ -1,3 +1,4 @@
+import {UnitType} from '../../other/unit';
 import {
   PostEditSuccessResponse,
   PostGetSuccessResponse,
@@ -8,15 +9,10 @@ import {
 } from '../base/response';
 import {CharacterSkill} from './payload';
 
-export enum AnalysisType {
-  CHARACTER = 1,
-  DRAGON = 2
-}
-
 export type AnalysisListResponse = PostListResponse<AnalysisListEntry>
 
 export type AnalysisListEntry = PostListEntry & {
-  type: AnalysisType,
+  type: UnitType,
 }
 
 export type CharaAnalysisPublishSuccessResponse = PostPublishSuccessResponse
@@ -24,7 +20,7 @@ export type CharaAnalysisPublishSuccessResponse = PostPublishSuccessResponse
 export type DragonAnalysisPublishSuccessResponse = PostPublishSuccessResponse
 
 export type AnalysisGetContent = {
-  type: AnalysisType,
+  type: UnitType,
   summary: string,
   summonResult: string,
   passives: string,
