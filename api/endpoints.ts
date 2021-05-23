@@ -18,7 +18,7 @@ export class ApiEndPoints {
 
   static POST_ANALYSIS_PUBLISH_CHARA = '/posts/analysis/publish/chara';
   static POST_ANALYSIS_PUBLISH_DRAGON = '/posts/analysis/publish/dragon';
-  static POST_ANALYSIS_LIST = '/posts/analysis';
+  static POST_ANALYSIS_LOOKUP = '/posts/analysis/lookup';
   static POST_ANALYSIS_GET = '/posts/analysis/get';
   static POST_ANALYSIS_EDIT_CHARA = '/posts/analysis/edit/chara';
   static POST_ANALYSIS_EDIT_DRAGON = '/posts/analysis/edit/dragon';

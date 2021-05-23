@@ -1,9 +1,10 @@
-import {PostEditPayload, PostListPayload, PostMetaPayload} from '../../base/payload';
+import {PostEditPayload, PostIdentifierPayload, RequestPayloadHasLang} from '../../base/payload';
 import {PostGetPayload, PostIdCheckPayload} from '../base/payload';
 
-export type AnalysisListPayload = PostListPayload
+export type AnalysisLookupPayload = RequestPayloadHasLang
 
-export type AnalysisPayload = PostMetaPayload & {
+export type AnalysisPayload = PostIdentifierPayload & {
+  unitId: number,
   summary: string,
   summon: string,
   passives: string,
@@ -15,7 +16,7 @@ export type AnalysisPayload = PostMetaPayload & {
 
 export type AnalysisPublishPayload = AnalysisPayload
 
-export type AnalysisEditPayload = PostEditPayload & AnalysisPublishPayload
+export type AnalysisEditPayload = AnalysisPublishPayload & PostEditPayload
 
 export type AnalysisGetPayload = PostGetPayload
 

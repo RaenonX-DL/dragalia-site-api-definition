@@ -1,8 +1,8 @@
 import {
   PostGetSuccessResponse,
   PostIdCheckResponse,
-  PostListEntry,
   PostListResponse,
+  PostUnit,
   PostUpdateSuccessResponse,
 } from '../base/response';
 import {PositionalInfo} from './payload';
@@ -10,7 +10,7 @@ import {PositionalInfo} from './payload';
 
 export type QuestPostListResponse = PostListResponse<QuestPostListEntry>
 
-export type QuestPostListEntry = PostListEntry
+export type QuestPostListEntry = PostUnit
 
 export type QuestPostPublishSuccessResponse = PostUpdateSuccessResponse
 

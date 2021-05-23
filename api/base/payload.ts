@@ -4,8 +4,11 @@ export type RequestPayloadBase = {
   googleUid: string
 }
 
-export type PostListPayload = RequestPayloadBase & {
-  langCode: SupportedLanguages,
+export type RequestPayloadHasLang = RequestPayloadBase & {
+  lang: SupportedLanguages,
+}
+
+export type PostListPayload = RequestPayloadHasLang & {
   start: number,
   limit: number
 }
@@ -19,6 +22,6 @@ export type PostMetaPayload = PostIdentifierPayload & {
   title: string,
 }
 
-export type PostEditPayload = PostMetaPayload & {
+export type PostEditPayload = PostIdentifierPayload & {
   editNote: string
 }

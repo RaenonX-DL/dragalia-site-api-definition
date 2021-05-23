@@ -1,18 +1,25 @@
+import {BaseResponse} from '../../base/response';
 import {UnitType} from '../../other/unit';
+import {UserIsAdminResponse} from '../../userControl/response';
 import {
   PostEditSuccessResponse,
   PostGetSuccessResponse,
   PostIdCheckResponse,
-  PostListEntry,
-  PostListResponse,
   PostPublishSuccessResponse,
+  PostUnitNoTitle,
 } from '../base/response';
 import {CharacterSkill} from './payload';
 
-export type AnalysisListResponse = PostListResponse<AnalysisListEntry>
-
-export type AnalysisListEntry = PostListEntry & {
+export type AnalysisLookupEntry = PostUnitNoTitle & {
   type: UnitType,
+  unitId: number,
+}
+
+export type AnalysisLookupAnalyses = { [UnitID in number]: AnalysisLookupEntry }
+
+export type AnalysisLookupResponse = BaseResponse &
+  UserIsAdminResponse & {
+  analyses: AnalysisLookupAnalyses
 }
 
 export type CharaAnalysisPublishSuccessResponse = PostPublishSuccessResponse

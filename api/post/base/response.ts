@@ -2,16 +2,17 @@ import {BaseResponse} from '../../base/response';
 import {SupportedLanguages} from '../../other/lang';
 import {UserIsAdminResponse, UserShowAdsResponse} from '../../userControl/response';
 
-export type PostUnit = {
+export type PostUnitNoTitle = {
   seqId: number,
   lang: SupportedLanguages,
-  title: string,
   viewCount: number,
   modifiedEpoch: number,
   publishedEpoch: number,
 }
 
-export type PostListEntry = PostUnit
+export type PostUnit = PostUnitNoTitle & {
+  title: string,
+}
 
 export type PostEditNote = {
   timestampEpoch: number,
@@ -24,7 +25,7 @@ export type PostUpdateSuccessResponse = BaseResponse & {
 
 export type PostPublishSuccessResponse = PostUpdateSuccessResponse
 
-export type PostListResponse<E extends PostListEntry = PostListEntry> = BaseResponse &
+export type PostListResponse<E extends PostUnit = PostUnit> = BaseResponse &
   UserIsAdminResponse &
   UserShowAdsResponse & {
   startIdx: number,
