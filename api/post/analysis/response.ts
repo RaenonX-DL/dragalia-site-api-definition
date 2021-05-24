@@ -4,7 +4,7 @@ import {UserIsAdminResponse} from '../../userControl/response';
 import {PostMeta} from '../base/elements/common';
 import {PostEditResponse, PostIdCheckResponse, PostPublishResponse} from '../base/response/common';
 import {SequencedPostGetResponse} from '../base/response/sequenced';
-import {CharacterSkill} from './elements';
+import {AnalysisBody, CharacterSkill} from './elements';
 
 export type AnalysisLookupEntry = PostMeta & {
   type: UnitType,
@@ -18,24 +18,13 @@ export type AnalysisLookupResponse = BaseResponse &
   analyses: AnalysisLookupAnalyses
 }
 
-export type CharaAnalysisPublishResponse = PostPublishResponse
-
-export type DragonAnalysisPublishResponse = PostPublishResponse
-
-export type AnalysisCommonContent = {
-  type: UnitType,
-  summary: string,
-  summonResult: string,
-  passives: string,
-  normalAttacks: string,
-  videos: string,
-  story: string,
-  keywords: string
+export type AnalysisPublishResponse = PostPublishResponse & {
+  unitId: number,
 }
 
-export type AnalysisGetResponse = SequencedPostGetResponse & AnalysisCommonContent
+export type AnalysisGetResponse = SequencedPostGetResponse & AnalysisBody
 
-export type CharaAnalysisContent = AnalysisCommonContent & {
+export type CharaAnalysisContent = AnalysisBody & {
   forceStrikes: string,
   skills: Array<CharacterSkill>,
   tipsBuilds: string
@@ -43,7 +32,7 @@ export type CharaAnalysisContent = AnalysisCommonContent & {
 
 export type CharaAnalysisGetResponse = AnalysisGetResponse & CharaAnalysisContent
 
-export type DragonAnalysisContent = AnalysisCommonContent & {
+export type DragonAnalysisContent = AnalysisBody & {
   ultimate: string,
   notes: string,
   suitableCharacters: string

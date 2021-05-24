@@ -1,3 +1,4 @@
+import {UnitType} from '../../other/unit';
 import {PostMetaPayload} from '../base/payload/common';
 
 export type CharacterSkill = {
@@ -8,9 +9,10 @@ export type CharacterSkill = {
 }
 
 export type AnalysisBody = Omit<PostMetaPayload, 'googleUid'> & {
+  type: UnitType,
   unitId: number,
   summary: string,
-  summon: string,
+  summonResult: string,
   passives: string,
   normalAttacks: string,
   videos: string,
