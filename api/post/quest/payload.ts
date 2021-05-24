@@ -11,7 +11,7 @@ export type QuestPostListPayload = SequencedPostListPayload
 
 export type QuestPostPublishPayload = SequencedPostPublishPayload & Omit<QuestPostBody, 'seqId'>;
 
-export type QuestPostEditPayload = SequencedPostEditPayload & QuestPostPublishPayload
+export type QuestPostEditPayload = SequencedPostEditPayload & QuestPostBody
 
 export type QuestPostGetPayload = SequencedPostGetPayload
 
