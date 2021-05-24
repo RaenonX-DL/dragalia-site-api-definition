@@ -8,9 +8,12 @@ export type CharacterSkill = {
   tips: string,
 }
 
-export type AnalysisBody = Omit<PostMetaPayload, 'googleUid'> & {
+export type AnalysisMeta = Omit<PostMetaPayload, 'googleUid'> & {
   type: UnitType,
   unitId: number,
+}
+
+export type AnalysisBody = AnalysisMeta & {
   summary: string,
   summonResult: string,
   passives: string,
