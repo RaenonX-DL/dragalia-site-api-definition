@@ -1,9 +1,9 @@
-import {PostEditPayload, PostIdentifierPayload, RequestPayloadHasLang} from '../../base/payload';
+import {PostEditPayload, RequestPayloadHasLang} from '../../base/payload';
 import {PostGetPayload} from '../base/payload';
 
 export type AnalysisLookupPayload = RequestPayloadHasLang
 
-export type AnalysisPayload = PostIdentifierPayload & {
+export type AnalysisPayload = RequestPayloadHasLang & {
   unitId: number,
   summary: string,
   summon: string,
