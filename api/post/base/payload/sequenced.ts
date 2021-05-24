@@ -5,7 +5,9 @@ export type SequencedPostMetaPayload = SequencedPayload & PostMetaPayload & {
   title: string,
 }
 
-export type SequencedPostPublishPayload = SequencedPostMetaPayload
+export type SequencedPostPublishPayload = Omit<SequencedPostMetaPayload, 'seqId'> & {
+  seqId?: number,
+}
 
 export type SequencedPostGetPayload = SequencedPayload & PostGetPayload
 
@@ -17,4 +19,3 @@ export type SequencedPostListPayload = RequestPayloadHasLang & {
 }
 
 export type SequencedPostEditPayload = PostEditPayload
-

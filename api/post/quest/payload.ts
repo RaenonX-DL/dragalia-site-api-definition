@@ -9,7 +9,7 @@ import {QuestPostBody} from './elements';
 
 export type QuestPostListPayload = SequencedPostListPayload
 
-export type QuestPostPublishPayload = SequencedPostPublishPayload & QuestPostBody;
+export type QuestPostPublishPayload = SequencedPostPublishPayload & Omit<QuestPostBody, 'seqId'>;
 
 export type QuestPostEditPayload = SequencedPostEditPayload & QuestPostPublishPayload
 
