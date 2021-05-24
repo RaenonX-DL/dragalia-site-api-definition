@@ -11,6 +11,6 @@ export type PostGetPayload = RequestPayloadHasLang & {
 
 export type PostIdCheckPayload = RequestPayloadHasLang
 
-export type PostEditPayload = {
+export type PostEditPayload = RequestPayloadHasLang & {
   editNote: string
 }
