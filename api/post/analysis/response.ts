@@ -40,7 +40,9 @@ export type DragonAnalysisContent = AnalysisBody & {
 
 export type DragonAnalysisGetResponse = AnalysisGetResponse & DragonAnalysisContent
 
-export type AnalysisEditResponse = PostEditResponse
+export type AnalysisEditResponse = PostEditResponse & {
+  unitId: number,
+}
 
 export type AnalysisIdCheckResponse = PostIdCheckResponse
 
