@@ -1,25 +1,8 @@
 import {RequestPayloadHasLang} from '../../base/payload';
-import {
-  PostEditPayload,
-  PostGetPayload,
-  PostIdCheckPayload,
-  PostMetaPayload,
-  PostPublishPayload,
-} from '../base/payload/common';
-import {CharacterSkill} from './elements';
+import {PostEditPayload, PostGetPayload, PostIdCheckPayload, PostPublishPayload} from '../base/payload/common';
+import {AnalysisBody, CharacterSkill} from './elements';
 
 export type AnalysisLookupPayload = RequestPayloadHasLang
-
-export type AnalysisBody = PostMetaPayload & {
-  unitId: number,
-  summary: string,
-  summon: string,
-  passives: string,
-  normalAttacks: string,
-  videos: string,
-  story: string,
-  keywords: string,
-}
 
 export type AnalysisPublishPayload = PostPublishPayload & AnalysisBody
 
