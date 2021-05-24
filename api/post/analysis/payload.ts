@@ -8,7 +8,9 @@ export type AnalysisPublishPayload = PostPublishPayload & AnalysisBody
 
 export type AnalysisEditPayload = PostEditPayload & AnalysisBody
 
-export type AnalysisGetPayload = PostGetPayload
+export type AnalysisGetPayload = PostGetPayload & {
+  unitId: number,
+}
 
 export type AnalysisIdCheckPayload = PostIdCheckPayload & {
   unitId: number,
