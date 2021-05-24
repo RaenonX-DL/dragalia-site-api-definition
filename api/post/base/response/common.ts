@@ -1,13 +1,14 @@
 import {BaseResponse} from '../../../base/response';
 import {SupportedLanguages} from '../../../other/lang';
 import {UserIsAdminResponse} from '../../../userControl/response';
-import {PostEditNote} from '../elements/common';
+import {PostEditNote, PostMeta} from '../elements/common';
 
 export type PostEditResponse = BaseResponse
 
 export type PostPublishResponse = PostEditResponse
 
 export type PostGetResponse = BaseResponse &
+  PostMeta &
   UserIsAdminResponse & {
   editNotes: Array<PostEditNote>,
   isAltLang: boolean,
