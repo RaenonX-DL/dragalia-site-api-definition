@@ -2,8 +2,7 @@ import {BaseResponse} from '../../base/response';
 import {UnitType} from '../../other/unit';
 import {UserIsAdminResponse} from '../../userControl/response';
 import {PostMeta} from '../base/elements/common';
-import {PostEditResponse, PostIdCheckResponse, PostPublishResponse} from '../base/response/common';
-import {SequencedPostGetResponse} from '../base/response/sequenced';
+import {PostEditResponse, PostGetResponse, PostIdCheckResponse, PostPublishResponse} from '../base/response/common';
 import {AnalysisBody, CharacterSkill} from './elements';
 
 export type AnalysisLookupEntry = PostMeta & {
@@ -22,7 +21,7 @@ export type AnalysisPublishResponse = PostPublishResponse & {
   unitId: number,
 }
 
-export type AnalysisGetResponse = SequencedPostGetResponse & AnalysisBody
+export type AnalysisGetResponse = PostGetResponse & AnalysisBody
 
 export type CharaAnalysisContent = AnalysisBody & {
   forceStrikes: string,
