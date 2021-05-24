@@ -6,7 +6,7 @@ import {
   SequencedPostListResponse,
   SequencedPostPublishResponse,
 } from '../base/response/sequenced';
-import {PositionalInfo} from './payload';
+import {PositionalInfo} from './elements';
 
 
 export type QuestPostListEntry = SequencedPostMeta

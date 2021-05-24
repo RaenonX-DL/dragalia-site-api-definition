@@ -1,9 +1,16 @@
-import {PostEditPayload, RequestPayloadHasLang} from '../../base/payload';
-import {PostGetPayload} from '../base/payload';
+import {RequestPayloadHasLang} from '../../base/payload';
+import {
+  PostEditPayload,
+  PostGetPayload,
+  PostIdCheckPayload,
+  PostMetaPayload,
+  PostPublishPayload,
+} from '../base/payload/common';
+import {CharacterSkill} from './elements';
 
 export type AnalysisLookupPayload = RequestPayloadHasLang
 
-export type AnalysisPayload = RequestPayloadHasLang & {
+export type AnalysisBody = PostMetaPayload & {
   unitId: number,
   summary: string,
   summon: string,
@@ -14,24 +21,17 @@ export type AnalysisPayload = RequestPayloadHasLang & {
   keywords: string,
 }
 
-export type AnalysisPublishPayload = AnalysisPayload
+export type AnalysisPublishPayload = PostPublishPayload & AnalysisBody
 
-export type AnalysisEditPayload = AnalysisPublishPayload & PostEditPayload
+export type AnalysisEditPayload = PostEditPayload & AnalysisBody
 
 export type AnalysisGetPayload = PostGetPayload
 
-export type AnalysisIdCheckPayload = RequestPayloadHasLang & {
+export type AnalysisIdCheckPayload = PostIdCheckPayload & {
   unitId: number,
 }
 
-export type CharacterSkill = {
-  name: string,
-  info: string,
-  rotations: string,
-  tips: string,
-}
-
-export type CharaAnalysisPayload = AnalysisPayload & {
+export type CharaAnalysisPayload = AnalysisBody & {
   forceStrikes: string,
   skills: Array<CharacterSkill>,
   tipsBuilds: string,
@@ -41,7 +41,7 @@ export type CharaAnalysisPublishPayload = AnalysisPublishPayload & CharaAnalysis
 
 export type CharaAnalysisEditPayload = AnalysisEditPayload & CharaAnalysisPublishPayload
 
-export type DragonAnalysisPayload = AnalysisPayload & {
+export type DragonAnalysisPayload = AnalysisBody & {
   ultimate: string,
   notes: string,
   suitableCharacters: string,

@@ -4,7 +4,7 @@ import {UserIsAdminResponse} from '../../userControl/response';
 import {PostMeta} from '../base/elements/common';
 import {PostEditResponse, PostIdCheckResponse, PostPublishResponse} from '../base/response/common';
 import {SequencedPostGetResponse} from '../base/response/sequenced';
-import {CharacterSkill} from './payload';
+import {CharacterSkill} from './elements';
 
 export type AnalysisLookupEntry = PostMeta & {
   type: UnitType,

@@ -1,26 +1,26 @@
-import {PostEditPayload, PostListPayload, PostMetaPayload} from '../../base/payload';
-import {PostGetPayload, PostIdCheckPayload} from '../base/payload';
+import {
+  SequencedPostEditPayload,
+  SequencedPostGetPayload,
+  SequencedPostIdCheckPayload,
+  SequencedPostListPayload,
+  SequencedPostMetaPayload,
+  SequencedPostPublishPayload,
+} from '../base/payload/sequenced';
+import {PositionalInfo} from './elements';
 
-export type PositionalInfo = {
-  position: string,
-  builds: string,
-  rotations: string,
-  tips: string,
-}
+export type QuestPostListPayload = SequencedPostListPayload
 
-export type QuestPostListPayload = PostListPayload
-
-export type QuestPostPayload = PostMetaPayload & {
+export type QuestPostBody = SequencedPostMetaPayload & {
   general: string,
   video: string,
   positional: Array<PositionalInfo>,
   addendum: string
 }
 
-export type QuestPostPublishPayload = QuestPostPayload;
+export type QuestPostPublishPayload = SequencedPostPublishPayload & QuestPostBody;
 
-export type QuestPostEditPayload = QuestPostPublishPayload & PostEditPayload
+export type QuestPostEditPayload = SequencedPostEditPayload & QuestPostPublishPayload
 
-export type QuestPostGetPayload = PostGetPayload
+export type QuestPostGetPayload = SequencedPostGetPayload
 
-export type QuestPostIdCheckPayload = PostIdCheckPayload
+export type QuestPostIdCheckPayload = SequencedPostIdCheckPayload
