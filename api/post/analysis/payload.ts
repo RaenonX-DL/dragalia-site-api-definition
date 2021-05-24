@@ -1,5 +1,5 @@
 import {PostEditPayload, PostIdentifierPayload, RequestPayloadHasLang} from '../../base/payload';
-import {PostGetPayload, PostIdCheckPayload} from '../base/payload';
+import {PostGetPayload} from '../base/payload';
 
 export type AnalysisLookupPayload = RequestPayloadHasLang
 
@@ -20,7 +20,9 @@ export type AnalysisEditPayload = AnalysisPublishPayload & PostEditPayload
 
 export type AnalysisGetPayload = PostGetPayload
 
-export type AnalysisIdCheckPayload = PostIdCheckPayload
+export type AnalysisIdCheckPayload = RequestPayloadHasLang & {
+  unitId: number,
+}
 
 export type CharacterSkill = {
   name: string,
