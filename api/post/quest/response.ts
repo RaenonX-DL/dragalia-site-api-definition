@@ -1,4 +1,4 @@
-import {SequencedPostMeta} from '../base/elements/sequenced';
+import {SequencedPostInfo} from '../base/elements/sequenced';
 import {PostIdCheckResponse} from '../base/response/common';
 import {
   SequencedPostEditResponse,
@@ -9,7 +9,7 @@ import {
 import {QuestPostBody} from './elements';
 
 
-export type QuestPostListEntry = SequencedPostMeta
+export type QuestPostListEntry = SequencedPostInfo
 
 export type QuestPostListResponse = SequencedPostListResponse<QuestPostListEntry>
 

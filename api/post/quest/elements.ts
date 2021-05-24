@@ -1,4 +1,4 @@
-import {SequencedPostMetaPayload} from '../base/payload/sequenced';
+import {SequencedPostMeta} from '../base/elements/sequenced';
 
 export type PositionalInfo = {
   position: string,
@@ -7,7 +7,7 @@ export type PositionalInfo = {
   tips: string,
 }
 
-export type QuestPostBody = SequencedPostMetaPayload & {
+export type QuestPostBody = SequencedPostMeta & {
   general: string,
   video: string,
   positional: Array<PositionalInfo>,
