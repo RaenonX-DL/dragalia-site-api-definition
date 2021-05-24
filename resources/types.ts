@@ -4,6 +4,7 @@ export * from './types/enum';
 export * from './types/ex';
 export * from './types/skillAtk';
 export * from './types/skillIdentifier';
+export * from './types/unitInfo';
 
 export * from './types/common/chara';
 export * from './types/common/effect';
