@@ -1,11 +1,11 @@
 import {BaseResponse} from '../../base/response';
 import {UnitType} from '../../other/unit';
 import {UserIsAdminResponse} from '../../userControl/response';
-import {PostMeta} from '../base/elements/common';
+import {PostInfo} from '../base/elements/common';
 import {PostEditResponse, PostGetResponse, PostIdCheckResponse, PostPublishResponse} from '../base/response/common';
 import {AnalysisBody, CharacterSkill} from './elements';
 
-export type AnalysisLookupEntry = PostMeta & {
+export type AnalysisLookupEntry = PostInfo & {
   type: UnitType,
   unitId: number,
 }

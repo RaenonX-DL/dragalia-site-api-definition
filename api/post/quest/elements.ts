@@ -7,7 +7,7 @@ export type PositionalInfo = {
   tips: string,
 }
 
-export type QuestPostBody = Omit<SequencedPostMetaPayload, 'googleUid'> & {
+export type QuestPostBody = SequencedPostMetaPayload & {
   general: string,
   video: string,
   positional: Array<PositionalInfo>,

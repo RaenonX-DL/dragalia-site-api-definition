@@ -1,5 +1,5 @@
 import {UnitType} from '../../other/unit';
-import {PostMetaPayload} from '../base/payload/common';
+import {PostMeta} from '../base/elements/common';
 
 export type CharacterSkill = {
   name: string,
@@ -8,7 +8,7 @@ export type CharacterSkill = {
   tips: string,
 }
 
-export type AnalysisMeta = Omit<PostMetaPayload, 'googleUid'> & {
+export type AnalysisMeta = PostMeta & {
   unitId: number,
 }
 

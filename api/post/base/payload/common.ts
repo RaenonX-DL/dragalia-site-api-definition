@@ -1,9 +1,6 @@
 import {RequestPayloadHasLang} from '../../../base/payload';
-import {PageMetaPayload} from '../../../meta/general/payload';
 
-export type PostMetaPayload = RequestPayloadHasLang
-
-export type PostPublishPayload = PageMetaPayload
+export type PostPublishPayload = RequestPayloadHasLang
 
 export type PostGetPayload = RequestPayloadHasLang & {
   incCount?: boolean

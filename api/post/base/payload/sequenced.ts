@@ -1,7 +1,8 @@
 import {OptionalSequencedPayload, RequestPayloadHasLang, SequencedPayload} from '../../../base/payload';
-import {PostEditPayload, PostGetPayload, PostIdCheckPayload, PostMetaPayload} from './common';
+import {PostMeta} from '../elements/common';
+import {PostEditPayload, PostGetPayload, PostIdCheckPayload} from './common';
 
-export type SequencedPostMetaPayload = SequencedPayload & PostMetaPayload & {
+export type SequencedPostMetaPayload = SequencedPayload & PostMeta & {
   title: string,
 }
 
