@@ -1,20 +1,21 @@
+import {SequencedPostMeta} from '../base/elements/sequenced';
+import {PostIdCheckResponse} from '../base/response/common';
 import {
-  PostGetSuccessResponse,
-  PostIdCheckResponse,
-  PostListResponse,
-  PostUnit,
-  PostUpdateSuccessResponse,
-} from '../base/response';
+  SequencedPostEditResponse,
+  SequencedPostGetResponse,
+  SequencedPostListResponse,
+  SequencedPostPublishResponse,
+} from '../base/response/sequenced';
 import {PositionalInfo} from './payload';
 
 
-export type QuestPostListResponse = PostListResponse<QuestPostListEntry>
+export type QuestPostListEntry = SequencedPostMeta
 
-export type QuestPostListEntry = PostUnit
+export type QuestPostListResponse = SequencedPostListResponse<QuestPostListEntry>
 
-export type QuestPostPublishSuccessResponse = PostUpdateSuccessResponse
+export type QuestPostPublishResponse = SequencedPostPublishResponse
 
-export type QuestPostGetContent = {
+export type QuestPostContent = {
   title: string,
   general: string,
   video: string,
@@ -22,8 +23,8 @@ export type QuestPostGetContent = {
   addendum: string,
 }
 
-export type QuestPostGetSuccessResponse = PostGetSuccessResponse & QuestPostGetContent
+export type QuestPostGetResponse = SequencedPostGetResponse & QuestPostContent
 
-export type QuestPostEditSuccessResponse = PostUpdateSuccessResponse
+export type QuestPostEditResponse = SequencedPostEditResponse
 
 export type QuestPostIdCheckResponse = PostIdCheckResponse

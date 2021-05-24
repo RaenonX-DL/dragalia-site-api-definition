@@ -22,3 +22,15 @@ export * from './api/userControl/response';
 
 export * from './api/endpoints';
 export * from './api/responseCode';
+export {SequencedPost} from './api/post/base/elements/sequenced';
+export {PostMeta} from './api/post/base/elements/common';
+export {SequencedPostMeta} from './api/post/base/elements/sequenced';
+export {PostEditNote} from './api/post/base/elements/common';
+export {PostPublishResponse} from './api/post/base/response/common';
+export {PostEditResponse} from './api/post/base/response/common';
+export {PostGetResponse} from './api/post/base/response/common';
+export {PostIdCheckResponse} from './api/post/base/response/common';
+export {SequencedPostGetResponse} from './api/post/base/response/sequenced';
+export {SequencedPostListResponse} from './api/post/base/response/sequenced';
+export {SequencedPostPublishResponse} from './api/post/base/response/sequenced';
+export {SequencedPostEditResponse} from './api/post/base/response/sequenced';

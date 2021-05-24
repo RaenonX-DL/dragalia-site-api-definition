@@ -1,16 +1,12 @@
 import {BaseResponse} from '../../base/response';
 import {UnitType} from '../../other/unit';
 import {UserIsAdminResponse} from '../../userControl/response';
-import {
-  PostEditSuccessResponse,
-  PostGetSuccessResponse,
-  PostIdCheckResponse,
-  PostPublishSuccessResponse,
-  PostUnitNoTitle,
-} from '../base/response';
+import {PostMeta} from '../base/elements/common';
+import {PostEditResponse, PostIdCheckResponse, PostPublishResponse} from '../base/response/common';
+import {SequencedPostGetResponse} from '../base/response/sequenced';
 import {CharacterSkill} from './payload';
 
-export type AnalysisLookupEntry = PostUnitNoTitle & {
+export type AnalysisLookupEntry = PostMeta & {
   type: UnitType,
   unitId: number,
 }
@@ -22,11 +18,11 @@ export type AnalysisLookupResponse = BaseResponse &
   analyses: AnalysisLookupAnalyses
 }
 
-export type CharaAnalysisPublishSuccessResponse = PostPublishSuccessResponse
+export type CharaAnalysisPublishResponse = PostPublishResponse
 
-export type DragonAnalysisPublishSuccessResponse = PostPublishSuccessResponse
+export type DragonAnalysisPublishResponse = PostPublishResponse
 
-export type AnalysisGetContent = {
+export type AnalysisCommonContent = {
   type: UnitType,
   summary: string,
   summonResult: string,
@@ -37,26 +33,26 @@ export type AnalysisGetContent = {
   keywords: string
 }
 
-export type AnalysisGetSuccessResponse = PostGetSuccessResponse & AnalysisGetContent
+export type AnalysisGetResponse = SequencedPostGetResponse & AnalysisCommonContent
 
-export type CharacterAnalysisGetContent = AnalysisGetContent & {
+export type CharaAnalysisContent = AnalysisCommonContent & {
   forceStrikes: string,
   skills: Array<CharacterSkill>,
   tipsBuilds: string
 }
 
-export type CharacterAnalysis = AnalysisGetSuccessResponse & CharacterAnalysisGetContent
+export type CharaAnalysisGetResponse = AnalysisGetResponse & CharaAnalysisContent
 
-export type DragonAnalysisGetContent = AnalysisGetContent & {
+export type DragonAnalysisContent = AnalysisCommonContent & {
   ultimate: string,
   notes: string,
   suitableCharacters: string
 }
 
-export type DragonAnalysis = AnalysisGetSuccessResponse & DragonAnalysisGetContent
+export type DragonAnalysisGetResponse = AnalysisGetResponse & DragonAnalysisContent
 
-export type AnalysisEditSuccessResponse = PostEditSuccessResponse
+export type AnalysisEditResponse = PostEditResponse
 
 export type AnalysisIdCheckResponse = PostIdCheckResponse
 
-export type AnalysisResponse = CharacterAnalysis | DragonAnalysis
+export type AnalysisResponse = CharaAnalysisGetResponse | DragonAnalysisGetResponse
