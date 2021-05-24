@@ -7,11 +7,3 @@ export type RequestPayloadBase = {
 export type RequestPayloadHasLang = RequestPayloadBase & {
   lang: SupportedLanguages,
 }
-
-export type OptionalSequencedPayload = {
-  seqId?: number,
-}
-
-export type SequencedPayload = {
-  seqId: number,
-}

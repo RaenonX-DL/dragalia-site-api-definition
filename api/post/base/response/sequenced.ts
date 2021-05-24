@@ -1,11 +1,12 @@
-import {BaseResponse, SequencedResponse} from '../../../base/response';
+import {Sequenced} from '../../../base/elements';
+import {BaseResponse} from '../../../base/response';
 import {UserIsAdminResponse} from '../../../userControl/response';
 import {SequencedPostInfo} from '../elements/sequenced';
 import {PostEditResponse, PostGetResponse, PostPublishResponse} from './common';
 
-export type SequencedPostEditResponse = SequencedResponse & PostEditResponse
+export type SequencedPostEditResponse = Sequenced & PostEditResponse
 
-export type SequencedPostPublishResponse = SequencedResponse & PostPublishResponse
+export type SequencedPostPublishResponse = Sequenced & PostPublishResponse
 
 export type SequencedPostListResponse<E extends SequencedPostInfo = SequencedPostInfo> = BaseResponse &
   UserIsAdminResponse & {

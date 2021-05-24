@@ -8,7 +8,3 @@ export type BaseResponse = {
 export type FailedResponse = BaseResponse & {
   message?: string,
 }
-
-export type SequencedResponse = {
-  seqId: number,
-}

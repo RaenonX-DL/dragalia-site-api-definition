@@ -1,4 +1,4 @@
-import {OptionalSequencedPayload} from '../../base/payload';
+import {OptionalSequenced} from '../../base/elements';
 import {
   SequencedPostEditPayload,
   SequencedPostGetPayload,
@@ -12,7 +12,7 @@ export type QuestPostListPayload = SequencedPostListPayload
 
 export type QuestPostPublishPayload = SequencedPostPublishPayload
   & Omit<QuestPostBody, 'seqId'>
-  & OptionalSequencedPayload;
+  & OptionalSequenced;
 
 export type QuestPostEditPayload = SequencedPostEditPayload & QuestPostBody
 

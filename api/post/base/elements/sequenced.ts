@@ -1,13 +1,10 @@
-import {SequencedPayload} from '../../../base/payload';
-import {SequencedResponse} from '../../../base/response';
+import {Sequenced} from '../../../base/elements';
 import {PostInfo, PostMeta} from './common';
 
-export type SequencedPost = SequencedResponse & {
+export type SequencedPost = Sequenced & {
   title: string,
 }
 
 export type SequencedPostInfo = PostInfo & SequencedPost
 
-export type SequencedPostMeta = PostMeta & SequencedPayload & {
-  title: string,
-}
+export type SequencedPostMeta = PostMeta & SequencedPost
