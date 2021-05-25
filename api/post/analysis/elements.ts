@@ -22,3 +22,15 @@ export type AnalysisBody = AnalysisMeta & {
   story: string,
   keywords: string,
 }
+
+export type CharaAnalysisBody = AnalysisBody & {
+  forceStrikes: string,
+  skills: Array<CharacterSkill>,
+  tipsBuilds: string,
+}
+
+export type DragonAnalysisBody = AnalysisBody & {
+  ultimate: string,
+  notes: string,
+  suitableCharacters: string,
+}

@@ -1,6 +1,6 @@
-import {RequestPayloadHasLang} from '../../base/payload';
+import {RequestPayloadBase, RequestPayloadHasLang} from '../../base/payload';
 import {PostEditPayload, PostGetPayload, PostIdCheckPayload, PostPublishPayload} from '../base/payload/common';
-import {AnalysisBody, AnalysisMeta, CharacterSkill} from './elements';
+import {AnalysisBody, AnalysisMeta, CharaAnalysisBody, DragonAnalysisBody} from './elements';
 
 export type AnalysisGetPayload = PostGetPayload & AnalysisMeta
 
@@ -12,17 +12,9 @@ export type AnalysisPublishPayload = PostPublishPayload & AnalysisBody
 
 export type AnalysisEditPayload = PostEditPayload & AnalysisBody
 
-export type CharaAnalysisPayload = AnalysisBody & {
-  forceStrikes: string,
-  skills: Array<CharacterSkill>,
-  tipsBuilds: string,
-}
+export type CharaAnalysisPayload = RequestPayloadBase & CharaAnalysisBody
 
-export type DragonAnalysisPayload = AnalysisBody & {
-  ultimate: string,
-  notes: string,
-  suitableCharacters: string,
-}
+export type DragonAnalysisPayload = RequestPayloadBase & DragonAnalysisBody
 
 export type CharaAnalysisPublishPayload = AnalysisPublishPayload & CharaAnalysisPayload
 
