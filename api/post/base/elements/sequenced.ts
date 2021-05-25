@@ -1,4 +1,4 @@
-import {Sequenced} from '../../../base/elements';
+import {OptionalSequenced, Sequenced} from '../../../base/elements';
 import {PostInfo, PostMeta} from './common';
 
 export type SequencedPost = Sequenced & {
@@ -8,3 +8,5 @@ export type SequencedPost = Sequenced & {
 export type SequencedPostInfo = PostInfo & SequencedPost
 
 export type SequencedPostMeta = PostMeta & SequencedPost
+
+export type OptionalSequencedPostMeta = Omit<SequencedPostMeta, 'seqId'> & OptionalSequenced
