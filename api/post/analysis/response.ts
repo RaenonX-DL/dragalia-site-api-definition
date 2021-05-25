@@ -3,7 +3,7 @@ import {UnitType} from '../../other/unit';
 import {UserIsAdminResponse} from '../../userControl/response';
 import {PostInfo} from '../base/elements/common';
 import {PostEditResponse, PostGetResponse, PostIdCheckResponse, PostPublishResponse} from '../base/response/common';
-import {AnalysisBody, CharacterSkill} from './elements';
+import {AnalysisBody, CharaAnalysisBody, DragonAnalysisBody} from './elements';
 
 export type AnalysisLookupEntry = PostInfo & {
   type: UnitType,
@@ -23,21 +23,9 @@ export type AnalysisPublishResponse = PostPublishResponse & {
 
 export type AnalysisGetResponse = PostGetResponse & AnalysisBody
 
-export type CharaAnalysisContent = AnalysisBody & {
-  forceStrikes: string,
-  skills: Array<CharacterSkill>,
-  tipsBuilds: string
-}
+export type CharaAnalysisGetResponse = AnalysisGetResponse & CharaAnalysisBody
 
-export type CharaAnalysisGetResponse = AnalysisGetResponse & CharaAnalysisContent
-
-export type DragonAnalysisContent = AnalysisBody & {
-  ultimate: string,
-  notes: string,
-  suitableCharacters: string
-}
-
-export type DragonAnalysisGetResponse = AnalysisGetResponse & DragonAnalysisContent
+export type DragonAnalysisGetResponse = AnalysisGetResponse & DragonAnalysisBody
 
 export type AnalysisEditResponse = PostEditResponse & {
   unitId: number,
