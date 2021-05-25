@@ -12,9 +12,12 @@ export type AnalysisLookupEntry = PostInfo & {
 
 export type AnalysisLookupAnalyses = { [UnitID in number]: AnalysisLookupEntry }
 
-export type AnalysisLookupResponse = BaseResponse &
-  UserIsAdminResponse & {
+export type AnalysisLookupResponse = BaseResponse & UserIsAdminResponse & {
   analyses: AnalysisLookupAnalyses
+}
+
+export type AnalysisLookupLandingResponse = BaseResponse & UserIsAdminResponse & {
+  analyses: Array<AnalysisLookupEntry>,
 }
 
 export type AnalysisPublishResponse = PostPublishResponse & {

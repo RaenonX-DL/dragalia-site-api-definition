@@ -8,6 +8,8 @@ export type AnalysisIdCheckPayload = PostIdCheckPayload & AnalysisMeta
 
 export type AnalysisLookupPayload = RequestPayloadHasLang
 
+export type AnalysisLookupLandingPayload = RequestPayloadHasLang
+
 export type AnalysisPublishPayload = PostPublishPayload & AnalysisBody
 
 export type AnalysisEditPayload = PostEditPayload & AnalysisBody
