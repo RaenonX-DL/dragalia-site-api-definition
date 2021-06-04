@@ -1,10 +1,10 @@
-// REACT_APP_* for the use of the frontend
-if (!process.env.REACT_APP_RESOURCE_ROOT) {
-  console.error('Specify `REACT_APP_RESOURCE_ROOT` as the root of the resources ends w/o slash.');
+// NEXT_PUBLIC_* for the use of the frontend
+if (!process.env.NEXT_PUBLIC_RESOURCE_ROOT) {
+  console.error('Specify `NEXT_PUBLIC_RESOURCE_ROOT` as the root of the resources ends w/o slash.');
   process.exit(1);
 }
-if (!process.env.REACT_APP_DEPOT_ROOT) {
-  console.error('Specify `REACT_APP_DEPOT_ROOT` as the root of the depot URL ends w/o slash.');
+if (!process.env.NEXT_PUBLIC_DEPOT_ROOT) {
+  console.error('Specify `NEXT_PUBLIC_DEPOT_ROOT` as the root of the depot URL ends w/o slash.');
   process.exit(1);
 }
 
@@ -12,7 +12,7 @@ if (!process.env.REACT_APP_DEPOT_ROOT) {
  * Class for resource paths.
  */
 export class ResourcePaths {
-  static ROOT = process.env.REACT_APP_RESOURCE_ROOT;
+  static ROOT = process.env.NEXT_PUBLIC_RESOURCE_ROOT;
 
   static ABILITY_DIR = ResourcePaths.ROOT + '/abilities';
   static ABILITY_EX = ResourcePaths.ABILITY_DIR + '/ex.json';
@@ -42,7 +42,7 @@ export class ResourcePaths {
  * Class for the data depot paths. Mostly used for obtaining the images.
  */
 export class DepotPaths {
-  static ROOT = process.env.REACT_APP_DEPOT_ROOT;
+  static ROOT = process.env.NEXT_PUBLIC_DEPOT_ROOT;
 
   /**
    * Get the URL of the image.
