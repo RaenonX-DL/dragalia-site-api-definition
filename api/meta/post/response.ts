@@ -1,10 +1,16 @@
 import {PageMetaResponse} from '../general/response';
 
-export type PostPageMetaParams = {
-  title: string,
-  description: string,
+export type AnalysisMetaParams = {
+  name: string,
+  summary: string,
 }
 
+export type QuestMetaParams = {
+  title: string,
+}
+
+export type PostMetaParams = AnalysisMetaParams | QuestMetaParams
+
 export type PostPageMetaResponse = PageMetaResponse & {
-  params: PostPageMetaParams,
+  params: PostMetaParams,
 }
