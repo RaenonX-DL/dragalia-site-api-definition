@@ -1,13 +1,13 @@
 import {BaseResponse} from '../../../base/response';
-import {UserIsAdminResponse} from '../../../userControl/response';
 import {PostBodyBase} from '../elements/common';
+
 
 export type PostEditResponse = BaseResponse
 
 export type PostPublishResponse = PostEditResponse
 
-export type PostGetResponse = BaseResponse & UserIsAdminResponse & PostBodyBase
+export type PostGetResponse = BaseResponse & PostBodyBase
 
-export type PostIdCheckResponse = BaseResponse & UserIsAdminResponse & {
+export type PostIdCheckResponse = BaseResponse & {
   available: boolean
 }

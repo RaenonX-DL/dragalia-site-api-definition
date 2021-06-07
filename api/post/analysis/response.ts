@@ -1,9 +1,9 @@
 import {BaseResponse} from '../../base/response';
 import {UnitType} from '../../other/unit';
-import {UserIsAdminResponse} from '../../userControl/response';
 import {PostInfo} from '../base/elements/common';
 import {PostEditResponse, PostGetResponse, PostIdCheckResponse, PostPublishResponse} from '../base/response/common';
 import {AnalysisBody, CharaAnalysisBody, DragonAnalysisBody} from './elements';
+
 
 export type AnalysisLookupEntry = PostInfo & {
   type: UnitType,
@@ -12,11 +12,11 @@ export type AnalysisLookupEntry = PostInfo & {
 
 export type AnalysisLookupAnalyses = { [UnitID in number]: AnalysisLookupEntry }
 
-export type AnalysisLookupResponse = BaseResponse & UserIsAdminResponse & {
+export type AnalysisLookupResponse = BaseResponse & {
   analyses: AnalysisLookupAnalyses
 }
 
-export type AnalysisLookupLandingResponse = BaseResponse & UserIsAdminResponse & {
+export type AnalysisLookupLandingResponse = BaseResponse & {
   analyses: Array<AnalysisLookupEntry>,
 }
 

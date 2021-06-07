@@ -1,6 +1,7 @@
 import {BaseResponse} from '../../base/response';
-import {UserIsAdminResponse, UserShowAdsResponse} from '../../userControl/response';
 
-export type PageMetaResponse = BaseResponse & UserShowAdsResponse & UserIsAdminResponse & {
+export type PageMetaResponse = BaseResponse & {
+  isAdmin: boolean,
+  showAds: boolean,
   params: { [key in string]: string },
 }
