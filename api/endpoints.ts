@@ -8,7 +8,6 @@ export enum ApiEndPoints {
   PAGE_META_POST = '/meta/post',
 
   USER_LOGIN = '/user/login',
-  USER_IS_ADMIN = '/user/is-admin',
 
   POST_QUEST_PUBLISH = '/posts/quest/publish',
   POST_QUEST_LIST = '/posts/quest',
