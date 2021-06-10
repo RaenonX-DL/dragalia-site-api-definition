@@ -8,7 +8,7 @@ export type PostInfo = {
   publishedEpoch: number,
 }
 
-export type PostMeta = Omit<RequestPayloadHasLang, 'googleUid'>
+export type PostMeta = Omit<RequestPayloadHasLang, 'uid'>
 
 export type PostBodyBase = PostInfo & {
   editNotes: Array<PostEditNote>,

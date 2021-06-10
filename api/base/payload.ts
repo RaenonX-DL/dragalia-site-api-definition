@@ -1,7 +1,7 @@
 import {SupportedLanguages} from '../other/lang';
 
 export type RequestPayloadBase = {
-  googleUid: string
+  uid: string
 }
 
 export type RequestPayloadHasLang = RequestPayloadBase & {
