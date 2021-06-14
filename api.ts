@@ -21,8 +21,5 @@ export * from './api/other/internalError/response';
 export * from './api/other/lang';
 export * from './api/other/unit';
 
-export * from './api/userControl/payload';
-export * from './api/userControl/response';
-
 export * from './api/endpoints';
 export * from './api/responseCode';
