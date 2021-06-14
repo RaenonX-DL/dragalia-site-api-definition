@@ -1,4 +1,5 @@
 import {ObjectId} from 'mongodb';
+import {DocumentBase} from './base';
 
 
 export const AUTH_DB = 'nextauth';
@@ -23,7 +24,7 @@ export enum UserDocumentKey {
   adsFreeExpiry = 'adsFreeExpiry',
 }
 
-export type UserDocument = {
+export type UserDocument = DocumentBase & {
   [UserDocumentKey.name]: string,
   [UserDocumentKey.email]: string,
   [UserDocumentKey.image]: string,
