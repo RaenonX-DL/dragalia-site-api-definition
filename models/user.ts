@@ -9,6 +9,9 @@ export const AUTH_USER_COLLECTION = 'users';
 
 export type User = {
   id: ObjectId,
+  name: string,
+  email: string,
+  image: string
   isAdmin: boolean,
   createdAt: Date,
   updatedAt: Date,
