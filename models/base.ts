@@ -6,4 +6,5 @@ export enum DocumentBaseKey {
 
 export type DocumentBase = {
   [DocumentBaseKey.id]?: ObjectId,
+  [key: string]: unknown,
 };
