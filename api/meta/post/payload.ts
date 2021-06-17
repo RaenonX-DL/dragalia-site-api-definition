@@ -1,7 +1,7 @@
 import {PostType} from '../../post/types';
-import {PageMetaLangSensitivePayload} from '../general/payload';
+import {PageMetaPayload} from '../general/payload';
 
-export type PostPageMetaPayload = PageMetaLangSensitivePayload & {
+export type PostPageMetaPayload = PageMetaPayload & {
   postId: number,
   postType: PostType,
 }

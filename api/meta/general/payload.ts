@@ -1,5 +1,3 @@
-import {RequestPayloadBase, RequestPayloadHasLang} from '../../base/payload';
+import {RequestPayloadHasLang} from '../../base/payload';
 
-export type PageMetaPayload = RequestPayloadBase
-
-export type PageMetaLangSensitivePayload = RequestPayloadHasLang & PageMetaPayload
+export type PageMetaPayload = RequestPayloadHasLang
