@@ -22,6 +22,8 @@ export enum ApiEndPoints {
   POST_ANALYSIS_EDIT_DRAGON = '/posts/analysis/edit/dragon',
   POST_ANALYSIS_ID_CHECK = '/posts/analysis/id-check',
 
+  DATA_UNIT_NAME_REF = '/data/unit-name-ref',
+
   // These shouldn't be used in any cases besides CI
   NOT_EXISTS = '/404',
   ERROR_TEST = '/500',
