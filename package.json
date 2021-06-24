@@ -1,6 +1,6 @@
 {
   "name": "dragalia-site-api-definition",
-  "version": "1.0.0",
+  "version": "2.8.0",
   "description": "The API definitions between the frontend and the backend of Dragalia Lost info website by OM in TypeScript.",
   "scripts": {
     "lint": "eslint api/ --ext .ts,.tsx",
