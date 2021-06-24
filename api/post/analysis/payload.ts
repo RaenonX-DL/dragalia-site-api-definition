@@ -2,7 +2,9 @@ import {RequestPayloadBase, RequestPayloadHasLang} from '../../base/payload';
 import {PostEditPayload, PostGetPayload, PostIdCheckPayload, PostPublishPayload} from '../base/payload/common';
 import {AnalysisBody, AnalysisMeta, CharaAnalysisBody, DragonAnalysisBody} from './elements';
 
-export type AnalysisGetPayload = PostGetPayload & AnalysisMeta
+export type AnalysisGetPayload = PostGetPayload & Omit<AnalysisMeta, 'unitId'> & {
+  unitId: number | string,
+}
 
 export type AnalysisIdCheckPayload = PostIdCheckPayload & AnalysisMeta
 
