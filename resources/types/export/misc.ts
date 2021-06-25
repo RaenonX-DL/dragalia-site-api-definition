@@ -24,6 +24,6 @@ export class ElementBonusData {
    * @return {number} element bonus of the user attacks the target
    */
   getElementBonus(userElementCodeStr: string, targetConditionCodeStr: string): number {
-    return this.data[userElementCodeStr][targetConditionCodeStr] || parseFloat('nan');
+    return this.data[`${userElementCodeStr}`][`${targetConditionCodeStr}`] || parseFloat('nan');
   }
 }

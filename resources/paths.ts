@@ -1,11 +1,9 @@
 // NEXT_PUBLIC_* for the use of the frontend
 if (!process.env.NEXT_PUBLIC_RESOURCE_ROOT) {
-  console.error('Specify `NEXT_PUBLIC_RESOURCE_ROOT` as the root of the resources ends w/o slash.');
-  process.exit(1);
+  throw new Error('Specify `NEXT_PUBLIC_RESOURCE_ROOT` as the root of the resources ends w/o slash.');
 }
 if (!process.env.NEXT_PUBLIC_DEPOT_ROOT) {
-  console.error('Specify `NEXT_PUBLIC_DEPOT_ROOT` as the root of the depot URL ends w/o slash.');
-  process.exit(1);
+  throw new Error('Specify `NEXT_PUBLIC_DEPOT_ROOT` as the root of the depot URL ends w/o slash.');
 }
 
 /**

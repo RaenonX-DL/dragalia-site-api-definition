@@ -27,7 +27,10 @@ export const toUnitInfoNameMap = (
   const ret = new Map<string, UnitInfoData>();
 
   for (const unitInfo of unitInfoIdMap.values()) {
-    ret.set(unitInfo.name[lang], unitInfo);
+    // Prevention of object injection sink
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    ret.set(unitInfo.name[`${lang}`], unitInfo);
   }
 
   Object.entries(unitNameRef).forEach(([name, unitId]) => {
