@@ -13,6 +13,7 @@ export type BuffFieldBoost = {
 
 export type AfflictionUnit = {
   statusConditionCode: number,
+  statusCode: number,
   statusIcon: string,
   actionTime: number,
   probabilityPct: number,

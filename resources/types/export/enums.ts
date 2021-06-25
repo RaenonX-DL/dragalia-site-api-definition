@@ -15,6 +15,10 @@ export type ElementEnums = {
   elemental: Array<EnumEntry>,
 }
 
+export type StatusEnums = {
+  status: Array<EnumEntry>,
+}
+
 export type WeaponTypeEnums = {
   weapon: Array<EnumEntry>,
 }
