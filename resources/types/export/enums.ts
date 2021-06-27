@@ -19,6 +19,10 @@ export type StatusEnums = {
   status: Array<EnumEntry>,
 }
 
+export type SkillEnums = {
+  cancel: Array<EnumEntry>
+}
+
 export type WeaponTypeEnums = {
   weapon: Array<EnumEntry>,
 }

@@ -21,6 +21,12 @@ export type AfflictionUnit = {
   stackable: boolean
 }
 
+export type CancelUnit = {
+  action: number,
+  time: number,
+  conditions: Array<number>,
+}
+
 export type AttackingSkillInfo = SkillDataBase & {
   modsMax: Array<number>,
   crisisMax: Array<number>,
@@ -29,7 +35,9 @@ export type AttackingSkillInfo = SkillDataBase & {
   buffCountBoost: Array<BuffCountBoost>,
   buffZoneBoost: BuffFieldBoost,
   dispelMax: boolean,
-  dispelTimingMax: Array<number>
+  dispelTimingMax: Array<number>,
+  hitTimingSecMax: Array<number>,
+  cancelActionsMax: Array<CancelUnit>,
 }
 
 export type AttackingSkillData = SkillEntryBase & {

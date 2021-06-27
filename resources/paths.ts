@@ -21,6 +21,7 @@ export class ResourcePaths {
   static ENUMS_CONDITIONS_ALL = ResourcePaths.ENUMS_DIR + '/allCondition.json';
   static ENUMS_ELEMENTS = ResourcePaths.ENUMS_DIR + '/elements.json';
   static ENUMS_STATUS = ResourcePaths.ENUMS_DIR + '/status.json';
+  static ENUMS_SKILL = ResourcePaths.ENUMS_DIR + '/skill.json';
   static ENUMS_WEAPON_TYPES = ResourcePaths.ENUMS_DIR + '/weaponType.json';
   static ENUMS_EX_PARAMS = ResourcePaths.ENUMS_DIR + '/exParam.json';
 
