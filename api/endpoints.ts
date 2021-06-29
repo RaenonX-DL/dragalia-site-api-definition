@@ -24,6 +24,8 @@ export enum ApiEndPoints {
 
   DATA_UNIT_NAME_REF = '/data/unit-name-ref',
 
+  PRESET_ATK_SKILL_INPUT = '/preset/atk-skill',
+
   // These shouldn't be used in any cases besides CI
   NOT_EXISTS = '/404',
   ERROR_TEST = '/500',

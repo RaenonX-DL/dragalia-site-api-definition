@@ -6,6 +6,10 @@ export * from './api/data/unitNameRef/payload';
 export * from './api/data/unitNameRef/response';
 export * from './api/data/unitNameRef/elements';
 
+export * from './api/preset/atkSkill/payload';
+export * from './api/preset/atkSkill/response';
+export * from './api/preset/atkSkill/elements';
+
 export * from './api/meta/elements';
 export * from './api/meta/general/payload';
 export * from './api/meta/general/response';
