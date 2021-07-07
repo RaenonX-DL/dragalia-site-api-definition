@@ -6,6 +6,7 @@ export type SkillDataBase = {
   internalId: number,
   name: MultiLangText,
   spMax: number,
+  spGradualPctMax: number,
   sharable: boolean,
   ssCost: number,
   ssSp: number
