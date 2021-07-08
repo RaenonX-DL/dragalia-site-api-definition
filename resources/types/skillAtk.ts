@@ -1,4 +1,6 @@
+import {CancelUnit} from './common/cancel';
 import {SkillDataBase, SkillEntryBase} from './common/skill';
+
 
 export type BuffCountBoost = {
   each: number,
@@ -19,12 +21,6 @@ export type AfflictionUnit = {
   probabilityPct: number,
   duration: number,
   stackable: boolean
-}
-
-export type CancelUnit = {
-  action: number,
-  time: number,
-  conditions: Array<number>,
 }
 
 export type AttackingSkillInfo = SkillDataBase & {
