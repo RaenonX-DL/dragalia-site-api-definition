@@ -35,6 +35,16 @@ export class ResourcePaths {
 
   static MISC_DIR = ResourcePaths.ROOT + '/misc';
   static MISC_ELEM_BONUS = ResourcePaths.MISC_DIR + '/elementBonus.json';
+
+  /**
+   * Get the URL of the normal attack info of an unit.
+   *
+   * @param {string} unitId unit ID of the desired combo info
+   * @return {string} URL of the combo info
+   */
+  static getComboURL(unitId: string): string {
+    return `${ResourcePaths.ROOT}/atk/combo/${unitId}.json`;
+  }
 }
 
 
