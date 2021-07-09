@@ -6,6 +6,7 @@ export enum ApiEndPoints {
 
   PAGE_META_GENERAL = '/meta/general',
   PAGE_META_POST = '/meta/post',
+  PAGE_META_UNIT = '/meta/unit',
 
   POST_QUEST_PUBLISH = '/posts/quest/publish',
   POST_QUEST_LIST = '/posts/quest',

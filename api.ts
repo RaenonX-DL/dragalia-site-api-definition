@@ -15,6 +15,8 @@ export * from './api/meta/general/payload';
 export * from './api/meta/general/response';
 export * from './api/meta/post/payload';
 export * from './api/meta/post/response';
+export * from './api/meta/unit/payload';
+export * from './api/meta/unit/response';
 
 export * from './api/post/types';
 export * from './api/post/base/elements';
