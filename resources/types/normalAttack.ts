@@ -4,6 +4,7 @@ import {MultiLangText} from './common/text';
 
 export type NormalAttackCombo = {
   cancelActions: Array<CancelUnit>,
+  cancelToNextSec: number,
   mods: Array<number>,
   odRate: Array<number>,
   crisisMod: Array<number>,
