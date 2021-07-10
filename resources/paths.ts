@@ -39,10 +39,10 @@ export class ResourcePaths {
   /**
    * Get the URL of the normal attack info of an unit.
    *
-   * @param {string} unitId unit ID of the desired combo info
+   * @param {number} unitId unit ID of the desired combo info
    * @return {string} URL of the combo info
    */
-  static getComboURL(unitId: string): string {
+  static getComboURL(unitId: number): string {
     return `${ResourcePaths.ROOT}/atk/combo/${unitId}.json`;
   }
 }
