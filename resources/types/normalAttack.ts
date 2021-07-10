@@ -15,6 +15,8 @@ export type NormalAttackCombo = {
 export type NormalAttackBranchedChain = {
   conditions: Array<number>,
   combos: Array<NormalAttackCombo>,
+  hasUtp: boolean,
+  hasCrisis: boolean,
 }
 
 export type NormalAttackChain = {
