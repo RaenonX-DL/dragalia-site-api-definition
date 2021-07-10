@@ -55,7 +55,7 @@ export class DepotPaths {
   static ROOT = process.env.NEXT_PUBLIC_DEPOT_ROOT;
 
   /**
-   * Get the URL of the image.
+   * Get the URL of an image.
    *
    * @param {string} imagePath path of the image originated from the image directory
    * @return {string} URL of the image
@@ -72,6 +72,16 @@ export class DepotPaths {
    */
   static getCharaIconURL(imageName: string): string {
     return DepotPaths.getImageURL(`/icon/chara/l/${imageName}.png`);
+  }
+
+  /**
+   * Get the large character illustration URL.
+   *
+   * @param {string} imageName name of the image without the extension
+   * @return {string} URL of the large character illustration
+   */
+  static getCharaImageURL(imageName: string): string {
+    return DepotPaths.getImageURL(`/outgame/unitdetail/chara/${imageName}.png`);
   }
 
   /**
