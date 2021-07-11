@@ -45,6 +45,16 @@ export class ResourcePaths {
   static getComboURL(unitId: number): string {
     return `${ResourcePaths.ROOT}/atk/combo/${unitId}.json`;
   }
+
+  /**
+   * Get the URL of an advanced unit info.
+   *
+   * @param {number} unitId unit ID of the unit info
+   * @return {string} URL of the advanced unit info
+   */
+  static getAdvancedInfoURL(unitId: number): string {
+    return `${ResourcePaths.INFO_DIR}/advanced/${unitId}.json`;
+  }
 }
 
 

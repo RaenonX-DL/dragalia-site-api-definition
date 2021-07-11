@@ -9,6 +9,10 @@ export * from './types/skillIdentifier';
 export * from './types/unitInfo';
 export * from './types/weapon';
 
+export * from './types/advancedInfo/common';
+export * from './types/advancedInfo/chara';
+export * from './types/advancedInfo/dragon';
+
 export * from './types/common/cancel';
 export * from './types/common/effect';
 export * from './types/common/effectAbility';
