@@ -1,5 +1,6 @@
-import {CharaData} from './chara';
+import {CharaInfoData} from '../charaInfo';
 import {MultiLangText} from './text';
+
 
 export type SkillDataBase = {
   identifiers: Array<string>,
@@ -15,6 +16,6 @@ export type SkillDataBase = {
 export type SkillEntryBase = {
   uniqueHash: string,
   condition: Array<number>,
-  chara: CharaData,
+  chara: CharaInfoData,
   skill: SkillDataBase
 }
