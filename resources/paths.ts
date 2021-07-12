@@ -1,4 +1,6 @@
 // NEXT_PUBLIC_* for the use of the frontend
+import {UnitType} from '../api/other/unit';
+
 if (!process.env.NEXT_PUBLIC_RESOURCE_ROOT) {
   throw new Error('Specify `NEXT_PUBLIC_RESOURCE_ROOT` as the root of the resources ends w/o slash.');
 }
@@ -112,6 +114,22 @@ export class DepotPaths {
    */
   static getDragonImageURL(imageName: string): string {
     return DepotPaths.getImageURL(`/outgame/unitdetail/dragon/${imageName}.png`);
+  }
+
+  /**
+   * Get the large unit illustration URL.
+   *
+   * @param {UnitType} unitType type of the unit
+   * @param {string} imageName name of the image without the extension
+   * @return {string} URL of the large unit illustration
+   */
+  static getUnitImageURL(unitType: UnitType, imageName: string): string {
+    switch (unitType) {
+    case UnitType.CHARACTER:
+      return DepotPaths.getCharaImageURL(imageName);
+    case UnitType.DRAGON:
+      return DepotPaths.getDragonImageURL(imageName);
+    }
   }
 
   /**
