@@ -1,5 +1,5 @@
-import {CharaInfoData} from '../charaInfo';
 import {MultiLangText} from './text';
+import {UnitInfoDataBase} from './unitInfo';
 
 
 export type SkillDataBase = {
@@ -16,6 +16,6 @@ export type SkillDataBase = {
 export type SkillEntryBase = {
   uniqueHash: string,
   condition: Array<number>,
-  unit: CharaInfoData,
+  unit: UnitInfoDataBase,
   skill: SkillDataBase
 }
