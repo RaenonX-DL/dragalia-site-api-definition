@@ -113,4 +113,14 @@ export class DepotPaths {
   static getAfflictionIconURL(statusIcon: string): string {
     return DepotPaths.getImageURL(`/icon/status/${statusIcon}.png`);
   }
+
+  /**
+   * Get the skill icon image URL.
+   *
+   * @param {string} skillIcon name of the skill icon
+   * @return {string} URL of the skill icon image
+   */
+  static getSkillIconURL(skillIcon: string): string {
+    return DepotPaths.getImageURL(`/icon/skill/l/${skillIcon}.png`);
+  }
 }
