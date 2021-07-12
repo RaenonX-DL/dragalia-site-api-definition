@@ -105,6 +105,16 @@ export class DepotPaths {
   }
 
   /**
+   * Get the large dragon illustration URL.
+   *
+   * @param {string} imageName name of the image without the extension
+   * @return {string} URL of the large dragon illustration
+   */
+  static getDragonImageURL(imageName: string): string {
+    return DepotPaths.getImageURL(`/outgame/unitdetail/dragon/${imageName}.png`);
+  }
+
+  /**
    * Get the affliction icon image URL.
    *
    * @param {string} statusIcon name of the status icon
