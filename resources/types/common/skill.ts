@@ -16,6 +16,6 @@ export type SkillDataBase = {
 export type SkillEntryBase = {
   uniqueHash: string,
   condition: Array<number>,
-  chara: CharaInfoData,
+  unit: CharaInfoData,
   skill: SkillDataBase
 }
