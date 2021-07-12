@@ -87,16 +87,6 @@ export class DepotPaths {
   }
 
   /**
-   * Get the large character illustration URL.
-   *
-   * @param {string} imageName name of the image without the extension
-   * @return {string} URL of the large character illustration
-   */
-  static getCharaImageURL(imageName: string): string {
-    return DepotPaths.getImageURL(`/outgame/unitdetail/chara/${imageName}.png`);
-  }
-
-  /**
    * Get the large dragon icon URL.
    *
    * @param {string} imageName name of the image without the extension
@@ -104,6 +94,32 @@ export class DepotPaths {
    */
   static getDragonIconURL(imageName: string): string {
     return DepotPaths.getImageURL(`/icon/dragon/l/${imageName}.png`);
+  }
+
+  /**
+   * Get the large unit icon URL.
+   *
+   * @param {UnitType} unitType type of the unit
+   * @param {string} imageName name of the image without the extension
+   * @return {string} URL of the large unit icon
+   */
+  static getUnitIconURL(unitType: UnitType, imageName: string): string {
+    switch (unitType) {
+    case UnitType.CHARACTER:
+      return DepotPaths.getCharaIconURL(imageName);
+    case UnitType.DRAGON:
+      return DepotPaths.getDragonIconURL(imageName);
+    }
+  }
+
+  /**
+   * Get the large character illustration URL.
+   *
+   * @param {string} imageName name of the image without the extension
+   * @return {string} URL of the large character illustration
+   */
+  static getCharaImageURL(imageName: string): string {
+    return DepotPaths.getImageURL(`/outgame/unitdetail/chara/${imageName}.png`);
   }
 
   /**
