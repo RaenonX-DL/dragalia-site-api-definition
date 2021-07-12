@@ -123,4 +123,14 @@ export class DepotPaths {
   static getSkillIconURL(skillIcon: string): string {
     return DepotPaths.getImageURL(`/icon/skill/l/${skillIcon}.png`);
   }
+
+  /**
+   * Get the ability icon image URL.
+   *
+   * @param {string} abilityIcon name of the ability icon
+   * @return {string} URL of the the ability icon image
+   */
+  static getAbilityIconURL(abilityIcon: string): string {
+    return DepotPaths.getImageURL(`/icon/ability/l/${abilityIcon}.png`);
+  }
 }
