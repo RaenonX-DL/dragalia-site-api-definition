@@ -1,4 +1,4 @@
-import {RequestPayloadBase, RequestPayloadHasLang} from '../../base/payload';
+import {RequestPayloadBase} from '../../base/payload';
 import {PostEditPayload, PostGetPayload, PostIdCheckPayload, PostPublishPayload} from '../base/payload/common';
 import {AnalysisBody, AnalysisMeta, CharaAnalysisBody, DragonAnalysisBody} from './elements';
 
@@ -7,10 +7,6 @@ export type AnalysisGetPayload = PostGetPayload & Omit<AnalysisMeta, 'unitId'> &
 }
 
 export type AnalysisIdCheckPayload = PostIdCheckPayload & AnalysisMeta
-
-export type AnalysisLookupPayload = RequestPayloadHasLang
-
-export type AnalysisLookupLandingPayload = RequestPayloadHasLang
 
 export type AnalysisPublishPayload = PostPublishPayload & AnalysisBody
 
