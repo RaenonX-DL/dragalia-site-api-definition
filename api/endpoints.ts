@@ -16,14 +16,15 @@ export enum ApiEndPoints {
 
   POST_ANALYSIS_PUBLISH_CHARA = '/posts/analysis/publish/chara',
   POST_ANALYSIS_PUBLISH_DRAGON = '/posts/analysis/publish/dragon',
-  POST_ANALYSIS_LOOKUP = '/posts/analysis/lookup',
-  POST_ANALYSIS_LOOKUP_LANDING = '/posts/analysis/lookup/landing',
   POST_ANALYSIS_GET = '/posts/analysis/get',
   POST_ANALYSIS_EDIT_CHARA = '/posts/analysis/edit/chara',
   POST_ANALYSIS_EDIT_DRAGON = '/posts/analysis/edit/dragon',
   POST_ANALYSIS_ID_CHECK = '/posts/analysis/id-check',
 
   DATA_UNIT_NAME_REF = '/data/unit-name-ref',
+
+  INFO_UNIT_LOOKUP = '/info/unit/lookup',
+  INFO_UNIT_LOOKUP_LANDING = '/info/unit/landing',
 
   PRESET_ATK_SKILL_INPUT = '/preset/atk-skill',
 
