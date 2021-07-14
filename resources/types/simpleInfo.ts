@@ -1,8 +1,10 @@
+import {UnitType} from '../../api/other/unit';
 import {MultiLangText} from './common/text';
 
 
 export type SimpleUnitInfoEntry = {
   name: MultiLangText,
+  type: UnitType,
   icon: string,
 }
 
