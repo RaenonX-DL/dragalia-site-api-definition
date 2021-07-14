@@ -32,6 +32,7 @@ export class ResourcePaths {
   static SKILLS_IDENTIFIERS = ResourcePaths.SKILLS_DIR + '/identifiers.json';
 
   static INFO_DIR = ResourcePaths.ROOT + '/info';
+  static INFO_SIMPLE = ResourcePaths.INFO_DIR + '/simple.json';
   static INFO_CHARA = ResourcePaths.INFO_DIR + '/chara.json';
   static INFO_DRAGON = ResourcePaths.INFO_DIR + '/dragon.json';
 

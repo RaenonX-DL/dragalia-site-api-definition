@@ -6,6 +6,7 @@ export * from './types/ex';
 export * from './types/normalAttack';
 export * from './types/skillAtk';
 export * from './types/skillIdentifier';
+export * from './types/simpleInfo';
 export * from './types/unitInfo';
 export * from './types/weapon';
 
