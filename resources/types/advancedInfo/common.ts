@@ -1,3 +1,4 @@
+import {ExAbilitiesEntry} from '../common/exAbility';
 import {MultiLangText} from '../common/text';
 import {AttackingSkillData} from '../skillAtk';
 import {CharaInfoDataAdvanced} from './chara';
@@ -25,6 +26,7 @@ export type AbilityInfo = {
   coAbility?: {
     global: OfficialAbilityInfo,
     chained: OfficialAbilityInfo,
+    parsed: ExAbilitiesEntry,
   }
 }
 
