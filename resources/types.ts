@@ -3,7 +3,7 @@ export * from './types/dragonInfo';
 export * from './types/enum';
 export * from './types/element';
 export * from './types/ex';
-export * from './types/normalAttack';
+export * from './types/autoFs';
 export * from './types/skillAtk';
 export * from './types/skillIdentifier';
 export * from './types/simpleInfo';

@@ -2,7 +2,7 @@ import {CancelUnit} from './common/cancel';
 import {MultiLangText} from './common/text';
 
 
-export type NormalAttackCombo = {
+export type AutoFsCombo = {
   cancelActions: Array<CancelUnit>,
   cancelToNextSec: number | null,
   mods: Array<number>,
@@ -12,14 +12,19 @@ export type NormalAttackCombo = {
   utp: number,
 }
 
-export type NormalAttackBranchedChain = {
+export type AutoFsBranchedChain = {
   conditions: Array<number>,
-  combos: Array<NormalAttackCombo>,
+  combos: Array<AutoFsCombo>,
   hasUtp: boolean,
   hasCrisis: boolean,
 }
 
-export type NormalAttackChain = {
+export type AutoFsChain = {
   chainName: MultiLangText,
-  chain: Array<NormalAttackBranchedChain>,
+  chain: Array<AutoFsBranchedChain>,
+}
+
+export type AutoFsData = {
+  fs: Array<AutoFsChain>,
+  auto: Array<AutoFsChain>,
 }

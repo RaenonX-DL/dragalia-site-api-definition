@@ -40,12 +40,12 @@ export class ResourcePaths {
   static MISC_ELEM_BONUS = ResourcePaths.MISC_DIR + '/elementBonus.json';
 
   /**
-   * Get the URL of the normal attack info of an unit.
+   * Get the URL of the auto/FS info of an unit.
    *
-   * @param {number} unitId unit ID of the desired combo info
-   * @return {string} URL of the combo info
+   * @param {number} unitId unit ID of the desired auto/FS info
+   * @return {string} URL of the auto/FS info
    */
-  static getComboURL(unitId: number): string {
+  static getAutoFsURL(unitId: number): string {
     return `${ResourcePaths.ROOT}/atk/combo/${unitId}.json`;
   }
 
