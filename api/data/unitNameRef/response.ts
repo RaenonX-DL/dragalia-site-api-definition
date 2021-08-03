@@ -9,3 +9,5 @@ export type UnitNameRefResponse = BaseResponse & {
 export type UnitNameRefManageResponse = BaseResponse & {
   refs: Array<UnitNameRefEntry>,
 }
+
+export type UnitNameRefUpdateResponse = BaseResponse
