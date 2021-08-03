@@ -25,6 +25,7 @@ export enum ApiEndPoints {
 
   INFO_UNIT_LOOKUP = '/info/unit/lookup',
   INFO_UNIT_LOOKUP_LANDING = '/info/unit/landing',
+  INFO_UNIT_NAME_REF = '/info/unit/name',
 
   PRESET_ATK_SKILL_INPUT = '/preset/atk-skill',
 
