@@ -38,3 +38,4 @@ export * from './api/other/unit';
 
 export * from './api/endpoints';
 export * from './api/responseCode';
+export * from './api/utils';
