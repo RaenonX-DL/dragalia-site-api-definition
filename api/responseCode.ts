@@ -1,4 +1,6 @@
 export enum ApiResponseCode {
+  NOT_EXECUTED = 0,
+
   SUCCESS = 100,
   SUCCESS_NEW = 101,
 
