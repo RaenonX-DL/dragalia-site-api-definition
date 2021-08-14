@@ -17,3 +17,5 @@ export type KeyPointEntryUpdate = KeyPointEntry & {
 export type KeyPointEntryFromBack = KeyPointEntry & {
   id: string,
 }
+
+export type KeyPointData = { [entryId in string]: KeyPointEntry }

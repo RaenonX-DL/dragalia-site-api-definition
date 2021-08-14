@@ -1,6 +1,10 @@
 import {BaseResponse} from '../../base/response';
-import {KeyPointEntryFromBack} from './elements';
+import {KeyPointData, KeyPointEntryFromBack} from './elements';
 
+
+export type KeyPointGetResponse = BaseResponse & {
+  data: KeyPointData,
+}
 
 export type KeyPointManageResponse = BaseResponse & {
   points: Array<KeyPointEntryFromBack>
