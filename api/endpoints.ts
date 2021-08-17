@@ -26,9 +26,11 @@ export enum ApiEndPoints {
   INFO_UNIT_LOOKUP = '/info/unit/lookup',
   INFO_UNIT_LOOKUP_LANDING = '/info/unit/landing',
 
+  TIER_NOTES = '/tier/notes',
   TIER_KEY_POINTS = '/tier/points',
 
   MANAGE_UNIT_NAME_REF = '/manage/unit/name',
+  MANAGE_TIER_NOTE = '/manage/tier/notes',
   MANAGE_TIER_POINTS = '/manage/tier/points',
 
   PRESET_ATK_SKILL_INPUT = '/preset/atk-skill',

@@ -32,6 +32,9 @@ export * from './api/post/quest/elements';
 export * from './api/post/quest/payload';
 export * from './api/post/quest/response';
 
+export * from './api/tier/notes/elements';
+export * from './api/tier/notes/payload';
+export * from './api/tier/notes/response';
 export * from './api/tier/points/elements';
 export * from './api/tier/points/payload';
 export * from './api/tier/points/response';
