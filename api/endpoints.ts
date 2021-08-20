@@ -23,6 +23,7 @@ export enum ApiEndPoints {
   POST_ANALYSIS_ID_CHECK = '/posts/analysis/id-check',
 
   DATA_UNIT_NAME_REF = '/data/unit-name-ref',
+  DATA_KEY_POINT = '/data/tier/points',
 
   INFO_UNIT_LOOKUP = '/info/unit/lookup',
   INFO_UNIT_LOOKUP_LANDING = '/info/unit/landing',
