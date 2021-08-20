@@ -9,3 +9,5 @@ export type AlertVariant =
   'dark' |
   'light' |
   string;
+
+export type DataType = 'tierKeyPoint'

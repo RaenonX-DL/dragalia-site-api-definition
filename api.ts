@@ -16,6 +16,8 @@ export * from './api/preset/atkSkill/elements';
 export * from './api/meta/elements';
 export * from './api/meta/general/payload';
 export * from './api/meta/general/response';
+export * from './api/meta/data/payload';
+export * from './api/meta/data/response';
 export * from './api/meta/post/payload';
 export * from './api/meta/post/response';
 export * from './api/meta/unit/payload';
