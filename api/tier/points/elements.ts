@@ -1,6 +1,7 @@
 export const KeyPointTypeEnum = {
   strength: 'strength',
   weakness: 'weakness',
+  trait: 'trait',
 };
 
 export type KeyPointType = keyof typeof KeyPointTypeEnum
