@@ -10,7 +10,8 @@ import {QuestPostBody} from './elements';
 
 export type QuestPostListPayload = SequencedPostListPayload
 
-export type QuestPostPublishPayload = SequencedPostPublishPayload
+export type QuestPostPublishPayload =
+  SequencedPostPublishPayload
   & Omit<QuestPostBody, 'seqId'>
   & OptionalSequenced;
 

@@ -27,10 +27,16 @@ rules:
   "@typescript-eslint/no-empty-interface":
     - error
 
-  indent:
+  "@typescript-eslint/indent":
     - error
     - 2
-    - MemberExpression: 1
+    - ignoredNodes:
+        - TSTypeParameterInstantiation
+      MemberExpression: 1
+
+  # Needs to disable local indent for this rule to work properly
+  indent:
+    - off
 
   max-len:
     - error
