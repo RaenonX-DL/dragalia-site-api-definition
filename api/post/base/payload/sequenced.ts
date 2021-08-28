@@ -3,6 +3,7 @@ import {RequestPayloadHasLang} from '../../../base/payload';
 import {SequencedPostMeta} from '../elements/sequenced';
 import {PostEditPayload, PostGetPayload, PostIdCheckPayload, PostPublishPayload} from './common';
 
+
 export type SequencedPostPublishPayload =
   PostPublishPayload &
   OptionalSequenced &

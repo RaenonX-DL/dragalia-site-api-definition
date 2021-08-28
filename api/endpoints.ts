@@ -15,6 +15,12 @@ export enum ApiEndPoints {
   POST_QUEST_EDIT = '/posts/quest/edit',
   POST_QUEST_ID_CHECK = '/posts/quest/id-check',
 
+  POST_MISC_PUBLISH = '/posts/misc/publish',
+  POST_MISC_LIST = '/posts/misc',
+  POST_MISC_GET = '/posts/misc/get',
+  POST_MISC_EDIT = '/posts/misc/edit',
+  POST_MISC_ID_CHECK = '/posts/misc/id-check',
+
   POST_ANALYSIS_PUBLISH_CHARA = '/posts/analysis/publish/chara',
   POST_ANALYSIS_PUBLISH_DRAGON = '/posts/analysis/publish/dragon',
   POST_ANALYSIS_GET = '/posts/analysis/get',
