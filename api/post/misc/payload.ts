@@ -3,10 +3,13 @@ import {
   SequencedPostEditPayload,
   SequencedPostGetPayload,
   SequencedPostIdCheckPayload,
+  SequencedPostListPayload,
   SequencedPostPublishPayload,
 } from '../base/payload/sequenced';
 import {MiscPostBody} from './elements';
 
+
+export type MiscPostListPayload = SequencedPostListPayload
 
 export type MiscPostPublishPayload =
   SequencedPostPublishPayload

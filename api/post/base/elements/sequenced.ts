@@ -1,6 +1,7 @@
 import {OptionalSequenced, Sequenced} from '../../../base/elements';
 import {PostInfo, PostMeta} from './common';
 
+
 export type SequencedPost = Sequenced & {
   title: string,
 }

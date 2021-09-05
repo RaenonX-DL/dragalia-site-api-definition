@@ -8,6 +8,7 @@ import {
 } from '../base/payload/sequenced';
 import {QuestPostBody} from './elements';
 
+
 export type QuestPostListPayload = SequencedPostListPayload
 
 export type QuestPostPublishPayload =
