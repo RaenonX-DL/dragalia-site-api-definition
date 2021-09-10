@@ -13,9 +13,6 @@ export type SequencedPostGetPayload = PostGetPayload & Sequenced
 
 export type SequencedPostIdCheckPayload = PostIdCheckPayload & OptionalSequenced
 
-export type SequencedPostListPayload = RequestPayloadHasLang & {
-  start: number,
-  limit: number
-}
+export type SequencedPostListPayload = RequestPayloadHasLang
 
 export type SequencedPostEditPayload = PostEditPayload & Sequenced

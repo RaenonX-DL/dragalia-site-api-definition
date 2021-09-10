@@ -9,8 +9,6 @@ export type SequencedPostEditResponse = Sequenced & PostEditResponse
 export type SequencedPostPublishResponse = Sequenced & PostPublishResponse
 
 export type SequencedPostListResponse<E extends SequencedPostInfo = SequencedPostInfo> = BaseResponse & {
-  startIdx: number,
-  postCount: number,
   posts: Array<E>
 }
 
