@@ -9,6 +9,7 @@ export * from './types/skillIdentifier';
 export * from './types/simpleInfo';
 export * from './types/unitInfo';
 export * from './types/weapon';
+export * from './types/story';
 
 export * from './types/advancedInfo/common';
 export * from './types/advancedInfo/chara';
