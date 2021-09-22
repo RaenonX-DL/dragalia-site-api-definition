@@ -8,7 +8,7 @@ export type StoryTalk = StoryBase<'conversation'> & {
   audioPaths: Array<string>,
   content: string,
   isSys: boolean,
-  speakerIcon: string,
+  speakerIcon: string | null,
   speakerName: string
 }
 
