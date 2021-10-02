@@ -19,8 +19,6 @@ export type AnalysisBody = AnalysisMeta & {
   passives: string,
   normalAttacks: string,
   videos: string,
-  story: string,
-  keywords: string,
 }
 
 export type CharaAnalysisBody = AnalysisBody & {
