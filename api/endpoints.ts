@@ -35,6 +35,7 @@ export enum ApiEndPoints {
   INFO_UNIT_LOOKUP_LANDING = '/info/unit/landing',
 
   TIER_NOTES = '/tier/notes',
+  TIER_UNIT = '/tier/unit',
   TIER_KEY_POINTS = '/tier/points',
 
   MANAGE_UNIT_NAME_REF = '/manage/unit/name',

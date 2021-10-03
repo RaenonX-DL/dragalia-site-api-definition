@@ -4,9 +4,11 @@ import {UnitTierNote} from './elements';
 
 export type UnitTierNoteGetPayload = RequestPayloadHasLang
 
-export type UnitTierNoteEditPayload = RequestPayloadHasLang & {
+export type UnitTierNoteSinglePayload = RequestPayloadHasLang & {
   unitId: number,
 }
+
+export type UnitTierNoteEditPayload = UnitTierNoteSinglePayload
 
 export type UnitTierNoteUpdatePayload = RequestPayloadHasLang & {
   unitId: number,
