@@ -1,9 +1,10 @@
 import {UnitType} from '../../../api/other/unit';
-import {MultiLangText} from './text';
+import {MultiLangText, MultiLangTextExtended} from './text';
+
 
 export type UnitInfoDataBase = {
   type: UnitType,
-  name: MultiLangText,
+  name: MultiLangTextExtended,
   iconName: string,
   id: number,
   element: number,

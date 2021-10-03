@@ -21,7 +21,6 @@ export * from './types/common/effectAbility';
 export * from './types/common/named';
 export * from './types/common/skill';
 export * from './types/common/text';
-export * from './types/common/unit';
 export * from './types/common/unitInfo';
 
 export * from './types/export/enums';
