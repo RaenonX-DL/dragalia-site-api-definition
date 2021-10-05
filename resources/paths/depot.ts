@@ -1,4 +1,4 @@
-import {UnitType} from '../../api/other/unit';
+import {UnitType} from '../types/src/types/enums/unitType';
 
 /**
  * Class for the data depot paths. Mostly used for obtaining the images.

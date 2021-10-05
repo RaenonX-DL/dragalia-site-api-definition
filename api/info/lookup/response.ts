@@ -1,5 +1,5 @@
+import {UnitType} from '../../../resources';
 import {BaseResponse} from '../../base/response';
-import {UnitType} from '../../other/unit';
 import {PostInfo} from '../../post/base/elements/common';
 
 

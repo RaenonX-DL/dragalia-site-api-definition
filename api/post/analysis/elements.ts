@@ -1,4 +1,4 @@
-import {UnitType} from '../../other/unit';
+import {UnitType} from '../../../resources';
 import {PostMeta} from '../base/elements/common';
 
 export type CharacterSkill = {

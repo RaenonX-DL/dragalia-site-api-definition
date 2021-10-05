@@ -1,17 +1,20 @@
 import {UnitNameRefData} from '../../api/data/unitNameRef/elements';
 import {SupportedLanguages} from '../../api/other/lang';
-import {UnitType} from '../../api/other/unit';
-import {CharaInfo} from '../types/charaInfo';
-import {DragonInfo} from '../types/dragonInfo';
-import {UnitInfoData, UnitInfoMap} from '../types/unitInfo';
+import {
+  BasicCharaInfoCollection,
+  BasicDragonInfoCollection,
+  BasicUnitInfo,
+  BasicUnitInfoMap,
+  UnitType,
+} from '../types';
 
 
 export const toUnitInfoMap = <K extends number | string>(
-  charaInfo: CharaInfo,
-  dragonInfo: DragonInfo,
-  getKey: (info: UnitInfoData) => K,
-): UnitInfoMap<K> => {
-  const data: Array<UnitInfoData> = [];
+  charaInfo: BasicCharaInfoCollection,
+  dragonInfo: BasicDragonInfoCollection,
+  getKey: (info: BasicUnitInfo) => K,
+): BasicUnitInfoMap<K> => {
+  const data: BasicUnitInfo[] = [];
 
   data.push(...charaInfo.map((data) => ({...data, type: UnitType.CHARACTER})));
   data.push(...dragonInfo.map((data) => ({...data, type: UnitType.DRAGON})));
@@ -20,11 +23,11 @@ export const toUnitInfoMap = <K extends number | string>(
 };
 
 export const toUnitInfoNameMap = (
-  unitInfoIdMap: UnitInfoMap<number>,
+  unitInfoIdMap: BasicUnitInfoMap<number>,
   lang: SupportedLanguages,
   unitNameRef: UnitNameRefData,
-): UnitInfoMap<string> => {
-  const ret = new Map<string, UnitInfoData>();
+): BasicUnitInfoMap<string> => {
+  const ret = new Map<string, BasicUnitInfo>();
 
   for (const unitInfo of unitInfoIdMap.values()) {
     // Prevention of object injection sink

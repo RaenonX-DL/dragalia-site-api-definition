@@ -49,7 +49,6 @@ export * from './api/tier/points/response';
 
 export * from './api/other/internalError/response';
 export * from './api/other/lang';
-export * from './api/other/unit';
 
 export * from './api/endpoints';
 export * from './api/responseCode';
