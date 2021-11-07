@@ -4,4 +4,4 @@ import {KeyPointInfo} from './elements';
 
 export type KeyPointInfoResponse = BaseResponse & {
   info: KeyPointInfo,
-}
+};

@@ -1,6 +1,6 @@
-export type Ranking = 'S' | 'A' | 'B' | 'C'
+export type Ranking = 'S' | 'A' | 'B' | 'C';
 
-export const RankingScore: { [ranking in Ranking]: number } = {
+export const RankingScore: {[ranking in Ranking]: number} = {
   S: 4,
   A: 3,
   B: 2,
@@ -20,12 +20,12 @@ export type TierNote = {
   isCompDependent: boolean,
   ranking: Ranking,
   note: string,
-}
+};
 
 export type UnitTierNote = {
   points: Array<string>,
-  tier: { [dim in DimensionKey]?: TierNote },
+  tier: {[dim in DimensionKey]?: TierNote},
   lastUpdateEpoch: number,
-}
+};
 
-export type UnitTierData = { [unitId in number]: UnitTierNote }
+export type UnitTierData = {[unitId in number]: UnitTierNote};

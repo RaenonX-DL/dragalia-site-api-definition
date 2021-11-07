@@ -4,13 +4,13 @@ import {UnitTierData, UnitTierNote} from './elements';
 
 export type UnitTierNoteGetResponse = BaseResponse & {
   data: UnitTierData,
-}
+};
 
 export type UnitTierNoteSingleResponse = BaseResponse & {
   // `null` if the requested unit does not have an existing tier note
   data: UnitTierNote | null,
-}
+};
 
-export type UnitTierNoteEditResponse = UnitTierNoteSingleResponse
+export type UnitTierNoteEditResponse = UnitTierNoteSingleResponse;
 
-export type UnitTierNoteUpdateResponse = BaseResponse
+export type UnitTierNoteUpdateResponse = BaseResponse;

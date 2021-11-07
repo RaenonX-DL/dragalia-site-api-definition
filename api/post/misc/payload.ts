@@ -9,15 +9,15 @@ import {
 import {MiscPostBody} from './elements';
 
 
-export type MiscPostListPayload = SequencedPostListPayload
+export type MiscPostListPayload = SequencedPostListPayload;
 
 export type MiscPostPublishPayload =
   SequencedPostPublishPayload
   & Omit<MiscPostBody, 'seqId'>
   & OptionalSequenced;
 
-export type MiscPostEditPayload = SequencedPostEditPayload & MiscPostBody
+export type MiscPostEditPayload = SequencedPostEditPayload & MiscPostBody;
 
-export type MiscPostGetPayload = SequencedPostGetPayload
+export type MiscPostGetPayload = SequencedPostGetPayload;
 
-export type MiscPostIdCheckPayload = SequencedPostIdCheckPayload
+export type MiscPostIdCheckPayload = SequencedPostIdCheckPayload;

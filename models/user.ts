@@ -16,7 +16,7 @@ export type User = {
   createdAt: Date,
   updatedAt: Date,
   adsFreeExpiry?: Date,
-}
+};
 
 export enum UserDocumentKey {
   name = 'name',
@@ -36,4 +36,4 @@ export type UserDocument = DocumentBase & {
   [UserDocumentKey.createdAt]: Date,
   [UserDocumentKey.updatedAt]: Date,
   [UserDocumentKey.adsFreeExpiry]?: Date,
-}
+};

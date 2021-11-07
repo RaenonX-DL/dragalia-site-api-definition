@@ -9,14 +9,14 @@ import {
 import {QuestPostBody} from './elements';
 
 
-export type QuestPostListEntry = SequencedPostInfo
+export type QuestPostListEntry = SequencedPostInfo;
 
-export type QuestPostListResponse = SequencedPostListResponse<QuestPostListEntry>
+export type QuestPostListResponse = SequencedPostListResponse<QuestPostListEntry>;
 
-export type QuestPostPublishResponse = SequencedPostPublishResponse
+export type QuestPostPublishResponse = SequencedPostPublishResponse;
 
-export type QuestPostGetResponse = SequencedPostGetResponse & QuestPostBody
+export type QuestPostGetResponse = SequencedPostGetResponse & QuestPostBody;
 
-export type QuestPostEditResponse = SequencedPostEditResponse
+export type QuestPostEditResponse = SequencedPostEditResponse;
 
-export type QuestPostIdCheckResponse = PostIdCheckResponse
+export type QuestPostIdCheckResponse = PostIdCheckResponse;

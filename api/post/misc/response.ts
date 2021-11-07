@@ -9,14 +9,14 @@ import {
 import {MiscPostBody} from './elements';
 
 
-export type MiscPostListEntry = SequencedPostInfo
+export type MiscPostListEntry = SequencedPostInfo;
 
-export type MiscPostListResponse = SequencedPostListResponse<MiscPostListEntry>
+export type MiscPostListResponse = SequencedPostListResponse<MiscPostListEntry>;
 
-export type MiscPostPublishResponse = SequencedPostPublishResponse
+export type MiscPostPublishResponse = SequencedPostPublishResponse;
 
-export type MiscPostEditResponse = SequencedPostEditResponse
+export type MiscPostEditResponse = SequencedPostEditResponse;
 
-export type MiscPostGetResponse = SequencedPostGetResponse & MiscPostBody
+export type MiscPostGetResponse = SequencedPostGetResponse & MiscPostBody;
 
-export type MiscPostIdCheckResponse = PostIdCheckResponse
+export type MiscPostIdCheckResponse = PostIdCheckResponse;

@@ -9,15 +9,15 @@ import {
 import {QuestPostBody} from './elements';
 
 
-export type QuestPostListPayload = SequencedPostListPayload
+export type QuestPostListPayload = SequencedPostListPayload;
 
 export type QuestPostPublishPayload =
   SequencedPostPublishPayload
   & Omit<QuestPostBody, 'seqId'>
   & OptionalSequenced;
 
-export type QuestPostEditPayload = SequencedPostEditPayload & QuestPostBody
+export type QuestPostEditPayload = SequencedPostEditPayload & QuestPostBody;
 
-export type QuestPostGetPayload = SequencedPostGetPayload
+export type QuestPostGetPayload = SequencedPostGetPayload;
 
-export type QuestPostIdCheckPayload = SequencedPostIdCheckPayload
+export type QuestPostIdCheckPayload = SequencedPostIdCheckPayload;

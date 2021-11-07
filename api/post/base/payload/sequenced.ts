@@ -7,12 +7,12 @@ import {PostEditPayload, PostGetPayload, PostIdCheckPayload, PostPublishPayload}
 export type SequencedPostPublishPayload =
   PostPublishPayload &
   OptionalSequenced &
-  Omit<SequencedPostMeta, 'seqId'>
+  Omit<SequencedPostMeta, 'seqId'>;
 
-export type SequencedPostGetPayload = PostGetPayload & Sequenced
+export type SequencedPostGetPayload = PostGetPayload & Sequenced;
 
-export type SequencedPostIdCheckPayload = PostIdCheckPayload & OptionalSequenced
+export type SequencedPostIdCheckPayload = PostIdCheckPayload & OptionalSequenced;
 
-export type SequencedPostListPayload = RequestPayloadHasLang
+export type SequencedPostListPayload = RequestPayloadHasLang;
 
-export type SequencedPostEditPayload = PostEditPayload & Sequenced
+export type SequencedPostEditPayload = PostEditPayload & Sequenced;
