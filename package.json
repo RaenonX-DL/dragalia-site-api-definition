@@ -14,7 +14,7 @@
   "author": "RaenonX",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^14.17.20",
+    "@types/node": "^16.11.14",
     "@typescript-eslint/eslint-plugin": "^5.3.0",
     "@typescript-eslint/parser": "^5.3.0",
     "@types/mongodb": "^3.6.18",
