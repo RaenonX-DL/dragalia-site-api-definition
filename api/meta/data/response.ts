@@ -5,7 +5,11 @@ export type TierKeyPointParams = {
   title: string,
 };
 
-export type DataMetaParams = TierKeyPointParams;
+export type DatamineParams = {
+  versionCode: string,
+};
+
+export type DataMetaParams = TierKeyPointParams | DatamineParams;
 
 export type DataPageMetaResponse = PageMetaResponse & {
   params: DataMetaParams,

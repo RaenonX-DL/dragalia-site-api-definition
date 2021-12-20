@@ -10,4 +10,4 @@ export type AlertVariant =
   'light' |
   string;
 
-export type DataType = 'tierKeyPoint';
+export type DataType = 'tierKeyPoint' | 'datamine';
