@@ -164,6 +164,6 @@ export class DepotPaths {
    * @return {string} URL of the updated file
    */
   static getURLofUpdatedFile(path: string): string {
-    return path.replace(/\.\.\//g, '');
+    return `${DepotPaths.ROOT}/${path.replace(/\.\.\//g, '')}`;
   }
 }
