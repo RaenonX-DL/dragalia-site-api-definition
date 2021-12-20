@@ -1,4 +1,4 @@
-type PyLocale = 'tw' | 'cn' | 'en' | 'jp';
+export type PyLocale = 'tw' | 'cn' | 'en' | 'jp';
 
 export type UpdatedIndexSubtask = {
   name: string,
