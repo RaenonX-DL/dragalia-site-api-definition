@@ -137,4 +137,33 @@ export class DepotPaths {
   static getStorySpeakerIconURL(imagePath: string): string {
     return DepotPaths.getEmotionURL(`/${imagePath}`);
   }
+
+  /**
+   * Get the updated file index catalog URL.
+   *
+   * @return {string} URL of the updated file index catalog
+   */
+  static getUpdatedFileIndexCatalogURL(): string {
+    return `${DepotPaths.ROOT}/updated/index.json`;
+  }
+
+  /**
+   * Get the updated file index file URL.
+   *
+   * @param {string} fileName name of the updated index file
+   * @return {string} URL of the story speaker icon
+   */
+  static getUpdatedFileIndexURL(fileName: string): string {
+    return `${DepotPaths.ROOT}/updated/${fileName}.json`;
+  }
+
+  /**
+   * Get the URL of the file listed in the updated file index.
+   *
+   * @param {string} path file path listed in the updated file index
+   * @return {string} URL of the updated file
+   */
+  static getURLofUpdatedFile(path: string): string {
+    return path.replace(/\.\.\//g, '');
+  }
 }
