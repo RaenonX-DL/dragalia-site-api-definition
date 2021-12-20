@@ -11,11 +11,11 @@ export type SkillDataBase = {
   sharable: boolean,
   ssCost: number,
   ssSp: number
-}
+};
 
 export type SkillEntryBase = {
   uniqueHash: string,
   condition: Array<number>,
   unit: UnitInfoDataBase,
   skill: SkillDataBase
-}
+};

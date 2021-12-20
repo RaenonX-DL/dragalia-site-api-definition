@@ -10,16 +10,16 @@ export type NormalAttackCombo = {
   crisisMod: Array<number>,
   sp: number,
   utp: number,
-}
+};
 
 export type NormalAttackBranchedChain = {
   conditions: Array<number>,
   combos: Array<NormalAttackCombo>,
   hasUtp: boolean,
   hasCrisis: boolean,
-}
+};
 
 export type NormalAttackChain = {
   chainName: MultiLangText,
   chain: Array<NormalAttackBranchedChain>,
-}
+};

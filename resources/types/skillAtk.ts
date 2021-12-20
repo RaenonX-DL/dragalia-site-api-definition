@@ -6,12 +6,12 @@ export type BuffCountBoost = {
   each: number,
   inEffect: number,
   limit: number,
-}
+};
 
 export type BuffFieldBoost = {
   self: number,
   ally: number,
-}
+};
 
 export type AfflictionUnit = {
   statusConditionCode: number,
@@ -21,7 +21,7 @@ export type AfflictionUnit = {
   probabilityPct: number,
   duration: number,
   stackable: boolean
-}
+};
 
 export type AttackingSkillInfo = SkillDataBase & {
   modsMax: Array<number>,
@@ -34,8 +34,8 @@ export type AttackingSkillInfo = SkillDataBase & {
   dispelTimingMax: Array<number>,
   hitTimingSecMax: Array<number>,
   cancelActionsMax: Array<CancelUnit>,
-}
+};
 
 export type AttackingSkillData = SkillEntryBase & {
   skill: AttackingSkillInfo
-}
+};

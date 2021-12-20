@@ -12,4 +12,4 @@ export type UnitInfoDataBase = {
   cvEn: MultiLangText,
   cvJp: MultiLangText,
   releaseEpoch: number,
-}
+};

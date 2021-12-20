@@ -1,5 +1,6 @@
 import {MultiLangText} from './text';
 
+
 export type EffectUnitDataBase = {
   status: MultiLangText,
   target: MultiLangText,
@@ -21,4 +22,4 @@ export type EffectUnitDataBase = {
   durationSec: number,
   maxStackCount: number,
   stackable: boolean
-}
+};

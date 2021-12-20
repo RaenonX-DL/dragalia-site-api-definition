@@ -6,6 +6,6 @@ export type SimpleUnitInfoEntry = {
   name: MultiLangTextExtended,
   type: UnitType,
   icon: string,
-}
+};
 
-export type SimpleUnitInfo = Record<string, SimpleUnitInfoEntry> // Key is the unit ID
+export type SimpleUnitInfo = Record<string, SimpleUnitInfoEntry>; // Key is the unit ID

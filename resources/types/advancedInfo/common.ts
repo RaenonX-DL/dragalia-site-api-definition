@@ -9,17 +9,17 @@ export type OfficialSkillInfo = {
   iconPath: string,
   name: MultiLangText,
   description: MultiLangText,
-}
+};
 
 export type SkillInfo = {
   official: Array<OfficialSkillInfo>,
   atkSkills: Array<AttackingSkillData>,
-}
+};
 
 export type OfficialAbilityInfo = {
   iconPath: string,
   description: MultiLangText,
-}
+};
 
 export type AbilityInfo = {
   passive: Array<OfficialAbilityInfo>,
@@ -28,6 +28,6 @@ export type AbilityInfo = {
     chained: OfficialAbilityInfo,
     parsed: ExAbilitiesEntry,
   }
-}
+};
 
-export type InfoDataAdvanced = CharaInfoDataAdvanced | DragonInfoDataAdvanced
+export type InfoDataAdvanced = CharaInfoDataAdvanced | DragonInfoDataAdvanced;

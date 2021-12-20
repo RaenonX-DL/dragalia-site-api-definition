@@ -5,7 +5,7 @@ export type ElementBonus = Record<string, Record<string, number>>;
  * Class for handling the element bonus data.
  */
 export class ElementBonusData {
-  data: ElementBonus
+  data: ElementBonus;
 
   /**
    * Construct an element bonus data controller.
