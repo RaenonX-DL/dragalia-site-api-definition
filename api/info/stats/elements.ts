@@ -18,9 +18,9 @@ export type GAPeriodKey = keyof typeof GAPeriod;
 
 export type GAPeriodicCountryUserData = {[period in GAPeriodKey]: GACountryUserData};
 
-export type GATotalUserOfDate = {
-  user: number,
+export type GALangUserOfDate = {
   date: string,
+  user: Map<string, number>,
 };
 
-export type GAPeriodicTotalUserData = GATotalUserOfDate[];
+export type GAPeriodicLangUserData = GALangUserOfDate[];
