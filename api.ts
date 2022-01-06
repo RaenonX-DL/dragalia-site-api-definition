@@ -11,6 +11,10 @@ export * from './api/data/unitNameRef/response';
 
 export * from './api/info/lookup/payload';
 export * from './api/info/lookup/response';
+export * from './api/info/home/elements';
+export * from './api/info/home/payload';
+export * from './api/info/home/response';
+export * from './api/info/stats/elements';
 
 export * from './api/preset/atkSkill/elements';
 export * from './api/preset/atkSkill/payload';

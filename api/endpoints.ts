@@ -4,6 +4,8 @@
 export enum ApiEndPoints {
   ROOT = '/',
 
+  HOME = '/home',
+
   PAGE_META_GENERAL = '/meta/general',
   PAGE_META_POST = '/meta/post',
   PAGE_META_UNIT = '/meta/unit',
