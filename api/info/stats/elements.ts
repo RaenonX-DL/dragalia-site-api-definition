@@ -20,7 +20,7 @@ export type GAPeriodicCountryUserData = {[period in GAPeriodKey]: GACountryUserD
 
 export type GALangUserOfDate = {
   date: string,
-  user: Map<string, number>,
+  user: Record<string, number>,
 };
 
 export type GAPeriodicLangUserData = GALangUserOfDate[];
