@@ -23,4 +23,7 @@ export type GALangUserOfDate = {
   user: Record<string, number>,
 };
 
-export type GAPeriodicLangUserData = GALangUserOfDate[];
+export type GAPeriodicLangUserData = {
+  data: GALangUserOfDate[],
+  toppedLang: string[],
+};
