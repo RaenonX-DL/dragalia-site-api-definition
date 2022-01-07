@@ -11,7 +11,7 @@ export const RankingScore: {[ranking in Ranking]: number} = {
 export const Dimension = {
   conSolo: 'conSolo', conAi: 'conAi', conCoop: 'conCoop',
   normalSolo: 'normalSolo', normalAi: 'normalAi', normalCoop: 'normalCoop',
-  sharedSkill: 'sharedSkill',
+  sharedSkill: 'sharedSkill', kaleidoscape: 'kaleido',
 };
 
 export type DimensionKey = keyof typeof Dimension;
