@@ -1,6 +1,8 @@
 import {PostInfo} from '../../post/base/elements/common';
 import {PostType} from '../../post/types';
-import {GAPeriodicCountryUserData, GAPeriodicLangUserData} from '../stats/elements';
+import {GAPeriodicActiveUserData} from '../stats/periodicActive';
+import {GAPeriodicCountryUserData} from '../stats/periodicCountry';
+import {GAPeriodicLangUserData} from '../stats/periodicLang';
 
 
 export type PostInfoEntry = {
@@ -16,6 +18,7 @@ export type HomepageData = {
     user: {
       perCountry: GAPeriodicCountryUserData,
       perLang: GAPeriodicLangUserData,
+      active: GAPeriodicActiveUserData,
     },
     lastFetchedEpoch: number,
   },

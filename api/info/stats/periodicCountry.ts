@@ -17,13 +17,3 @@ export const GAPeriod = {
 export type GAPeriodKey = keyof typeof GAPeriod;
 
 export type GAPeriodicCountryUserData = {[period in GAPeriodKey]: GACountryUserData};
-
-export type GALangUserOfDate = {
-  date: string,
-  user: Record<string, number>,
-};
-
-export type GAPeriodicLangUserData = {
-  data: GALangUserOfDate[],
-  toppedLang: string[],
-};
