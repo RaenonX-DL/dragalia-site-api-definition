@@ -1,5 +1,6 @@
 import {ObjectId} from 'mongodb';
 
+import {SupportedLanguages} from '../api/other/lang';
 import {DocumentBase} from './base';
 
 
@@ -16,6 +17,7 @@ export type User = {
   createdAt: Date,
   updatedAt: Date,
   adsFreeExpiry?: Date,
+  lang: SupportedLanguages,
 };
 
 export enum UserDocumentKey {
@@ -26,6 +28,7 @@ export enum UserDocumentKey {
   createdAt = 'createdAt',
   updatedAt = 'updatedAt',
   adsFreeExpiry = 'adsFreeExpiry',
+  lang = 'lang',
 }
 
 export type UserDocument = DocumentBase & {
@@ -36,4 +39,5 @@ export type UserDocument = DocumentBase & {
   [UserDocumentKey.createdAt]: Date,
   [UserDocumentKey.updatedAt]: Date,
   [UserDocumentKey.adsFreeExpiry]?: Date,
+  [UserDocumentKey.lang]?: SupportedLanguages,
 };
