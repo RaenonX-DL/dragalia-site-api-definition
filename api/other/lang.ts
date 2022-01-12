@@ -19,3 +19,5 @@ export const SupportedLanguageNames: {[lang in SupportedLanguages]: string} = {
 export const isSupportedLang = (lang: string): lang is SupportedLanguages => {
   return Object.values(SupportedLanguages).some((supported) => supported === lang);
 };
+
+export const DEFAULT_LANG = SupportedLanguages.CHT;
