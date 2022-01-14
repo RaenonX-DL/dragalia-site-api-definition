@@ -1,10 +1,17 @@
+import urlJoin from 'url-join';
+
 import {UnitType} from '../../api/other/unit';
+
+
+if (!process.env.NEXT_PUBLIC_DEPOT_ROOT) {
+  throw new Error('Define `NEXT_PUBLIC_DEPOT_ROOT` as the root URL of the depot repository without ending slash.');
+}
 
 /**
  * Class for the data depot paths. Mostly used for obtaining the images.
  */
 export class DepotPaths {
-  static ROOT = process.env.NEXT_PUBLIC_DEPOT_ROOT;
+  static ROOT = process.env.NEXT_PUBLIC_DEPOT_ROOT as string;
 
   /**
    * Get the URL of an image. Use `getEmotionURL` for story images.
@@ -13,7 +20,7 @@ export class DepotPaths {
    * @return {string} URL of the image
    */
   static getImageURL(imagePath: string): string {
-    return `${DepotPaths.ROOT}/assets/_gluonresources/resources/images${imagePath}`;
+    return urlJoin(DepotPaths.ROOT, 'assets', '_gluonresources', 'resources', 'images', imagePath);
   }
 
   /**
@@ -23,7 +30,7 @@ export class DepotPaths {
    * @return {string} URL of the emotion image
    */
   static getEmotionURL(imagePath: string): string {
-    return `${DepotPaths.ROOT}/assets/_gluonresources/resources/emotion${imagePath}`;
+    return urlJoin(DepotPaths.ROOT, 'assets', '_gluonresources', 'resources', 'emotion', imagePath);
   }
 
   /**
@@ -33,7 +40,7 @@ export class DepotPaths {
    * @return {string} URL of the large character icon
    */
   static getCharaIconURL(imageName: string): string {
-    return DepotPaths.getImageURL(`/icon/chara/l/${imageName}.png`);
+    return DepotPaths.getImageURL(urlJoin('icon', 'chara', 'l', `${imageName}.png`));
   }
 
   /**
@@ -43,7 +50,7 @@ export class DepotPaths {
    * @return {string} URL of the large dragon icon
    */
   static getDragonIconURL(imageName: string): string {
-    return DepotPaths.getImageURL(`/icon/dragon/l/${imageName}.png`);
+    return DepotPaths.getImageURL(urlJoin('icon', 'dragon', 'l', `${imageName}.png`));
   }
 
   /**
@@ -69,7 +76,7 @@ export class DepotPaths {
    * @return {string} URL of the large character illustration
    */
   static getCharaImageURL(imageName: string): string {
-    return DepotPaths.getImageURL(`/outgame/unitdetail/chara/${imageName}.png`);
+    return DepotPaths.getImageURL(urlJoin('outgame', 'unitdetail', 'chara', `${imageName}.png`));
   }
 
   /**
@@ -79,7 +86,7 @@ export class DepotPaths {
    * @return {string} URL of the large dragon illustration
    */
   static getDragonImageURL(imageName: string): string {
-    return DepotPaths.getImageURL(`/outgame/unitdetail/dragon/${imageName}.png`);
+    return DepotPaths.getImageURL(urlJoin('outgame', 'unitdetail', 'dragon', `${imageName}.png`));
   }
 
   /**
@@ -105,7 +112,7 @@ export class DepotPaths {
    * @return {string} URL of the status icon
    */
   static getAfflictionIconURL(statusIcon: string): string {
-    return DepotPaths.getImageURL(`/icon/status/${statusIcon}.png`);
+    return DepotPaths.getImageURL(urlJoin('icon', 'status', `${statusIcon}.png`));
   }
 
   /**
@@ -115,7 +122,7 @@ export class DepotPaths {
    * @return {string} URL of the skill icon
    */
   static getSkillIconURL(skillIcon: string): string {
-    return DepotPaths.getImageURL(`/icon/skill/l/${skillIcon}.png`);
+    return DepotPaths.getImageURL(urlJoin('icon', 'skill', 'l', `${skillIcon}.png`));
   }
 
   /**
@@ -125,7 +132,7 @@ export class DepotPaths {
    * @return {string} URL of the ability icon
    */
   static getAbilityIconURL(abilityIcon: string): string {
-    return DepotPaths.getImageURL(`/icon/ability/l/${abilityIcon}.png`);
+    return DepotPaths.getImageURL(urlJoin('icon', 'ability', 'l', `${abilityIcon}.png`));
   }
 
   /**
@@ -135,7 +142,7 @@ export class DepotPaths {
    * @return {string} URL of the story speaker icon
    */
   static getStorySpeakerIconURL(imagePath: string): string {
-    return DepotPaths.getEmotionURL(`/${imagePath}`);
+    return DepotPaths.getEmotionURL(imagePath);
   }
 
   /**
@@ -144,7 +151,7 @@ export class DepotPaths {
    * @return {string} URL of the updated file index catalog
    */
   static getUpdatedFileIndexCatalogURL(): string {
-    return `${DepotPaths.ROOT}/updated/index.json`;
+    return urlJoin(DepotPaths.ROOT, 'updated', 'index.json');
   }
 
   /**
@@ -154,7 +161,7 @@ export class DepotPaths {
    * @return {string} URL of the story speaker icon
    */
   static getUpdatedFileIndexURL(fileName: string): string {
-    return `${DepotPaths.ROOT}/updated/${fileName}.json`;
+    return urlJoin(DepotPaths.ROOT, 'updated', `${fileName}.json`);
   }
 
   /**
@@ -164,6 +171,6 @@ export class DepotPaths {
    * @return {string} URL of the updated file
    */
   static getURLofUpdatedFile(path: string): string {
-    return `${DepotPaths.ROOT}/${path.replace(/\.\.\//g, '')}`;
+    return urlJoin(DepotPaths.ROOT, `${path.replace(/\.\.\//g, '')}`);
   }
 }
