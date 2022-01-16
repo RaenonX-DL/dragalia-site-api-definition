@@ -14,8 +14,6 @@ export type User = {
   email: string,
   image: string
   isAdmin: boolean,
-  createdAt: Date,
-  updatedAt: Date,
   adsFreeExpiry?: Date,
   lang: SupportedLanguages,
 };
@@ -25,8 +23,6 @@ export enum UserDocumentKey {
   email = 'email',
   image = 'image',
   isAdmin = 'isAdmin',
-  createdAt = 'createdAt',
-  updatedAt = 'updatedAt',
   adsFreeExpiry = 'adsFreeExpiry',
   lang = 'lang',
 }
@@ -36,8 +32,6 @@ export type UserDocument = DocumentBase & {
   [UserDocumentKey.email]: string,
   [UserDocumentKey.image]: string,
   [UserDocumentKey.isAdmin]: boolean,
-  [UserDocumentKey.createdAt]: Date,
-  [UserDocumentKey.updatedAt]: Date,
   [UserDocumentKey.adsFreeExpiry]?: Date,
   [UserDocumentKey.lang]?: SupportedLanguages,
 };
