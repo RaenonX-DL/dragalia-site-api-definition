@@ -5,3 +5,8 @@ export type Sequenced = {
 export type OptionalSequenced = {
   seqId?: number,
 };
+
+export type EmailSendResult = {
+  accepted: string[],
+  rejected: string[],
+};
