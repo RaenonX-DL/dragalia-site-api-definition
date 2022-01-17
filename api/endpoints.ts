@@ -46,7 +46,9 @@ export enum ApiEndPoints {
 
   PRESET_ATK_SKILL_INPUT = '/preset/atk-skill',
 
-  USER_SUBSCRIPTIONS = '/user/subscriptions',
+  USER_SUBSCRIPTIONS_UPDATE = '/user/subscriptions/update',
+  USER_SUBSCRIPTIONS_ADD = '/user/subscriptions/add',
+  USER_SUBSCRIPTIONS_REMOVE = '/user/subscriptions/remove',
 
   // These shouldn't be used in any cases besides CI
   NOT_EXISTS = '/404',
