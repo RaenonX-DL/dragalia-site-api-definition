@@ -64,6 +64,9 @@ export enum GeneralPath {
   // Others
   UPDATE_UNIT_NAME_REF = '/name',
   GAME_DATAMINE_INDEX = '/datamine',
+  // User Settings
+  USER_GENERAL = '/user/general',
+  USER_SUBSCRIPTION = '/user/subscriptions',
   // Not game related
   ABOUT = '/about',
   SPECIAL_THANKS = '/thanks',
