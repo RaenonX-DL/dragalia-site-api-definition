@@ -3,19 +3,19 @@ import {allPaths, DataPath, PagePath, PostPath, UnitPath} from './definitions';
 
 
 export const isDataPath = (path: string): path is DataPath => {
-  return Object.values(DataPath).some((dataPath) => dataPath === path);
+  return Object.values(DataPath).includes(path as DataPath);
 };
 
 export const isUnitPath = (path: string): path is UnitPath => {
-  return Object.values(UnitPath).some((unitPath) => unitPath === path);
+  return Object.values(UnitPath).includes(path as UnitPath);
 };
 
 export const isPostPath = (path: string): path is PostPath => {
-  return Object.values(PostPath).some((postPath) => postPath === path);
+  return Object.values(PostPath).includes(path as PostPath);
 };
 
 export const isPagePath = (path: string): path is PagePath => {
-  return allPaths.some((pagePath) => pagePath === path);
+  return allPaths.includes(path as PagePath);
 };
 
 export const toPostPath: {[type in PostType]: PostPath} = {
