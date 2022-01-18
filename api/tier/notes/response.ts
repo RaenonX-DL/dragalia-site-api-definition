@@ -4,6 +4,7 @@ import {UnitTierData, UnitTierNote} from './elements';
 
 export type UnitTierNoteGetResponse = BaseResponse & {
   data: UnitTierData,
+  userSubscribed: boolean,
 };
 
 export type UnitTierNoteSingleResponse = BaseResponse & {

@@ -7,6 +7,7 @@ export type PostInfo = {
   viewCount: number,
   modifiedEpoch: number,
   publishedEpoch: number,
+  userSubscribed: boolean,
 };
 
 export type PostMeta = Omit<RequestPayloadHasLang, 'uid'>;
