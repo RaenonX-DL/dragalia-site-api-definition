@@ -10,6 +10,7 @@ export type SequencedPostPublishResponse = Sequenced & PostPublishResponse;
 
 export type SequencedPostListResponse<E extends SequencedPostInfo = SequencedPostInfo> = BaseResponse & {
   posts: Array<E>
+  userSubscribed: boolean,
 };
 
 export type SequencedPostGetResponse = PostGetResponse & SequencedPostInfo;

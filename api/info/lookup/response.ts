@@ -16,4 +16,5 @@ export type UnitInfoLookupResponse = BaseResponse & {
 
 export type UnitInfoLookupLandingResponse = BaseResponse & {
   analyses: Array<UnitInfoLookupEntry>,
+  userSubscribed: boolean,
 };
