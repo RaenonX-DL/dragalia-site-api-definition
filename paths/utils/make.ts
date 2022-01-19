@@ -2,7 +2,7 @@ import {SupportedLanguages} from '../../api/other/lang';
 import {DataPath, GeneralPath, PostPath, StoryPath, UnitPath} from '../const/definitions';
 
 
-const generateUrl = (path: string, args: {[key in string]: string | number}) => {
+const generateUrl = (path: string, args: {[key in string]: string | number}): string => {
   Object
     .keys(args)
     .forEach((key) => {
@@ -16,7 +16,7 @@ type PathArgs = {
   lang: SupportedLanguages,
 };
 
-export const makeGeneralUrl = (path: GeneralPath, args: PathArgs) => {
+export const makeGeneralUrl = (path: GeneralPath, args: PathArgs): string => {
   return generateUrl(`/${args.lang}${path}`, args);
 };
 
@@ -25,7 +25,7 @@ type DataPathArgs = PathArgs & {
   id: string,
 };
 
-export const makeDataUrl = (path: DataPath, args: DataPathArgs) => {
+export const makeDataUrl = (path: DataPath, args: DataPathArgs): string => {
   return generateUrl(`/${args.lang}${path}`, args);
 };
 
@@ -34,7 +34,7 @@ type PostPathArgs = PathArgs & {
   pid: number,
 };
 
-export const makePostUrl = (path: PostPath, args: PostPathArgs) => {
+export const makePostUrl = (path: PostPath, args: PostPathArgs): string => {
   return generateUrl(`/${args.lang}${path}`, args);
 };
 
@@ -43,7 +43,7 @@ type UnitPathArgs = PathArgs & {
   id: number,
 };
 
-export const makeUnitUrl = (path: UnitPath, args: UnitPathArgs) => {
+export const makeUnitUrl = (path: UnitPath, args: UnitPathArgs): string => {
   return generateUrl(`/${args.lang}${path}`, args);
 };
 
@@ -52,6 +52,6 @@ type StoryPathArgs = PathArgs & {
   id: number,
 };
 
-export const makeStoryUrl = (path: StoryPath, args: StoryPathArgs) => {
+export const makeStoryUrl = (path: StoryPath, args: StoryPathArgs): string => {
   return generateUrl(`/${args.lang}${path}`, args);
 };

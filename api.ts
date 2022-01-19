@@ -68,7 +68,3 @@ export * from './api/user/subscription/update/response';
 export * from './api/endpoints';
 export * from './api/responseCode';
 export * from './api/utils';
-export {SubscriptionKey} from './api/user/subscription/key/type';
-export {SubscriptionKeyPost} from './api/user/subscription/key/type';
-export {SubscriptionKeyConst} from './api/user/subscription/key/type';
-export {SubscriptionKeyConstName} from './api/user/subscription/key/type';

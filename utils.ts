@@ -2,7 +2,7 @@ export const isProduction = () => {
   return process.env.NODE_ENV === 'production';
 };
 
-export const isCi = () => {
+export const isCi = (): boolean => {
   const ciString = process.env.CI;
 
   if (!ciString) {

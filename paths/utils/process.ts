@@ -4,9 +4,9 @@ import {DEFAULT_LANG, isSupportedLang, SupportedLanguages} from '../../api/other
 import {PATH_ROOT} from '../const/definitions';
 
 
-export const makeLangUrl = (url: string, lang: SupportedLanguages) => `/${lang}${urlRemoveLang(url)}`;
+export const makeLangUrl = (url: string, lang: SupportedLanguages): string => `/${lang}${urlRemoveLang(url)}`;
 
-export const urlRemoveLang = (url: string) => {
+export const urlRemoveLang = (url: string): string => {
   for (const lang of Object.values(SupportedLanguages)) {
     const urlPrefix = `/${lang}`;
 
@@ -25,7 +25,7 @@ export const urlRemoveLang = (url: string) => {
   return url;
 };
 
-export const pathnameRemoveLang = (pathname: string) => {
+export const pathnameRemoveLang = (pathname: string): string => {
   pathname = pathname.replace(PATH_ROOT, '');
 
   if (!pathname) {
@@ -35,7 +35,7 @@ export const pathnameRemoveLang = (pathname: string) => {
   return pathname;
 };
 
-export const mergePlaceholders = (pathname: string, query: ParsedUrlQuery) => {
+export const mergePlaceholders = (pathname: string, query: ParsedUrlQuery): string => {
   Object.entries(query).forEach(([placeholder, value]) => {
     if (typeof value === 'string') {
       pathname = pathname.replace(`[${placeholder}]`, value);
