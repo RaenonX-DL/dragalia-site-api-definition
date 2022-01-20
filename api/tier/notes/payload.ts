@@ -13,4 +13,5 @@ export type UnitTierNoteEditPayload = UnitTierNoteSinglePayload;
 export type UnitTierNoteUpdatePayload = RequestPayloadHasLang & {
   unitId: number,
   data: Omit<UnitTierNote, 'lastUpdateEpoch'>,
+  sendUpdateEmail: boolean,
 };

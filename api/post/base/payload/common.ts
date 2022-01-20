@@ -1,14 +1,18 @@
 import {RequestPayloadHasLang} from '../../../base/payload';
 
 
-export type PostPublishPayload = RequestPayloadHasLang;
+export type PostUpdateCommonPayload = {
+  sendUpdateEmail: boolean,
+};
+
+export type PostPublishPayload = RequestPayloadHasLang & PostUpdateCommonPayload;
 
 export type PostGetPayload = RequestPayloadHasLang & {
-  incCount?: boolean
+  incCount?: boolean,
 };
 
 export type PostIdCheckPayload = RequestPayloadHasLang;
 
-export type PostEditPayload = RequestPayloadHasLang & {
-  editNote: string
+export type PostEditPayload = RequestPayloadHasLang & PostUpdateCommonPayload & {
+  editNote: string,
 };
