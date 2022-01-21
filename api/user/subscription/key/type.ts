@@ -6,7 +6,7 @@ export type SubscriptionKeyConstName =
   'ALL_ANALYSIS' |
   'ALL_MISC' |
   'ALL_TIER' |
-  'SITE_FEATURE';
+  'ANNOUNCEMENT';
 
 export type SubscriptionKeyConst = {
   type: 'const',
