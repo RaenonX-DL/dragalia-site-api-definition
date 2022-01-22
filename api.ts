@@ -60,6 +60,8 @@ export * from './api/other/unit';
 export * from './api/user/subscription/key';
 export * from './api/user/subscription/add/payload';
 export * from './api/user/subscription/add/response';
+export * from './api/user/subscription/get/payload';
+export * from './api/user/subscription/get/response';
 export * from './api/user/subscription/remove/payload';
 export * from './api/user/subscription/remove/response';
 export * from './api/user/subscription/update/payload';
