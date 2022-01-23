@@ -5,5 +5,8 @@ import {HomepageData} from './elements';
 
 export type HomepageLandingResponse = BaseResponse & {
   data: HomepageData,
-  userSubscribed: {[type in PostType]: boolean},
+  subscribed: {
+    post: {[type in PostType]: boolean},
+    announcement: boolean,
+  },
 };
