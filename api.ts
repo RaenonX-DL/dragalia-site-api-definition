@@ -2,6 +2,9 @@ export * from './api/base/payload';
 export * from './api/base/response';
 export * from './api/base/elements';
 
+export * from './api/admin/announcement/payload';
+export * from './api/admin/announcement/response';
+
 export * from './api/data/keyPoint/elements';
 export * from './api/data/keyPoint/payload';
 export * from './api/data/keyPoint/response';

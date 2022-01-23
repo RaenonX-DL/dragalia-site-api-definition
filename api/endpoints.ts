@@ -52,6 +52,8 @@ export enum ApiEndPoints {
   USER_SUBSCRIPTIONS_ADD = '/user/subscriptions/add',
   USER_SUBSCRIPTIONS_REMOVE = '/user/subscriptions/remove',
 
+  ADMIN_SEND_ANNOUNCEMENT = '/admin/announcement',
+
   // These shouldn't be used in any cases besides CI
   NOT_EXISTS = '/404',
   ERROR_TEST = '/500',
