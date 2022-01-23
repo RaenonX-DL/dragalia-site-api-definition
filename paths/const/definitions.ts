@@ -61,6 +61,8 @@ export enum GeneralPath {
   // Tools
   ROTATION_CALC = '/tools/rotation',
   ENMITY_CALC = '/tools/enmity',
+  // Admin
+  ADMIN_ANNOUNCEMENT = '/admin/announcement',
   // Others
   UPDATE_UNIT_NAME_REF = '/name',
   GAME_DATAMINE_INDEX = '/datamine',
