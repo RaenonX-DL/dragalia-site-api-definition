@@ -46,8 +46,9 @@ export enum ApiEndPoints {
 
   PRESET_ATK_SKILL_INPUT = '/preset/atk-skill',
 
-  USER_SUBSCRIPTIONS_UPDATE = '/user/subscriptions/update',
-  USER_SUBSCRIPTIONS_GET = '/user/subscriptions/get',
+  USER_CONFIG_GET = '/user/settings/get',
+  USER_CONFIG_UPDATE = '/user/settings/update',
+
   USER_SUBSCRIPTIONS_ADD = '/user/subscriptions/add',
   USER_SUBSCRIPTIONS_REMOVE = '/user/subscriptions/remove',
 

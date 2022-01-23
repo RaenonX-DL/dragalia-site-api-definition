@@ -1,4 +1,4 @@
 import {BaseResponse} from '../../../base/response';
 
 
-export type SubscriptionUpdateResponse = BaseResponse;
+export type UserConfigUpdateResponse = BaseResponse;

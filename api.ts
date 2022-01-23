@@ -57,15 +57,17 @@ export * from './api/other/internalError/response';
 export * from './api/other/lang';
 export * from './api/other/unit';
 
+export * from './api/user/config/elements';
+export * from './api/user/config/get/payload';
+export * from './api/user/config/get/response';
+export * from './api/user/config/update/payload';
+export * from './api/user/config/update/response';
+
 export * from './api/user/subscription/key';
 export * from './api/user/subscription/add/payload';
 export * from './api/user/subscription/add/response';
-export * from './api/user/subscription/get/payload';
-export * from './api/user/subscription/get/response';
 export * from './api/user/subscription/remove/payload';
 export * from './api/user/subscription/remove/response';
-export * from './api/user/subscription/update/payload';
-export * from './api/user/subscription/update/response';
 
 export * from './api/endpoints';
 export * from './api/responseCode';
