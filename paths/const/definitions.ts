@@ -58,6 +58,7 @@ export enum GeneralPath {
   SKILL_ATK = '/skill/atk',
   SKILL_SUP = '/skill/sup',
   STORY = '/story',
+  AMP_LOOKUP = '/amp',
   // Tools
   ROTATION_CALC = '/tools/rotation',
   ENMITY_CALC = '/tools/enmity',
